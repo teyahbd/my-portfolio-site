@@ -9,7 +9,9 @@ function NavBar(props: NavBarProps) {
   return (
     <nav>
       {navOptions.map((option) => {
-        return <NavButton text={option} isMobile={props.isMobile} />;
+        return (
+          <NavButton text={option} isMobile={props.isMobile} key={option} />
+        );
       })}
     </nav>
   );
