@@ -1,0 +1,8 @@
+nav {
+  font-size: inherit;
+  width: 35vw;
+  height: fit-content;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}

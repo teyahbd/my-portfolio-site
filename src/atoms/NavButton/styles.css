@@ -1,0 +1,16 @@
+a {
+  cursor: pointer;
+  width: fit-content;
+  text-decoration: none;
+}
+
+.web-nav-button {
+  color: white;
+  font-size: inherit;
+  font-weight: 400;
+  transition-duration: 0.3s;
+}
+
+.web-nav-button:hover {
+  color: blueviolet;
+}
