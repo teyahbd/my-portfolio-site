@@ -1,0 +1,31 @@
+#experience {
+  color: purple;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 2em;
+  height: 130vh;
+  background-image: url("../../assets/img/watercolor.png");
+}
+
+#experience > h1 {
+  font-size: 84px;
+  font-family: var(--header-font);
+  width: 100%;
+  text-align: left;
+}
+
+#experience-box-container {
+  display: flex;
+  width: 100%;
+  justify-content: space-evenly;
+  padding: 7em;
+}
+
+/* p {
+  color: purple;
+  font-size: 32px;
+  padding: 4em;
+  text-align: center;
+} */
