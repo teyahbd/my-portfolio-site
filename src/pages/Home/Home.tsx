@@ -3,9 +3,11 @@ import "./styles.css";
 function Home() {
   return (
     <section>
-      <p>
-        Hi, I'm <span>Teyah</span>! I'm a <span>software engineer</span> based
-        in <span>Manchester</span>.
+      <p id="intro-text">
+        Hi, I'm <span className="hover-color">Teyah</span>! I'm a
+        <span className="hover-color">software engineer</span> based in
+        <span className="hover-color">Manchester</span>. Maybe a little more
+        detail here and redesign.
       </p>
       <div
         style={{

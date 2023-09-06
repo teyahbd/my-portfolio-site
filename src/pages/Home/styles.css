@@ -1,28 +1,30 @@
 section {
-  height: 100vh;
+  height: 90vh;
   width: 100vw;
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
-p {
+#intro-text {
   height: fit-content;
-  color: white;
-  font-size: 60px;
+  color: rgb(108, 0, 170);
+  font-size: 56px;
   padding: 1em;
   line-height: 1.2em;
   width: 50vw;
-  background-color: rgb(100, 0, 140);
+  text-align: left;
 }
 
-span {
+.hover-color {
   transition-duration: 0.3s;
   background-color: inherit;
+  color: inherit;
+  font-size: inherit;
 }
 
-span:hover {
-  color: rgb(255, 221, 0);
+.hover-color:hover {
+  color: rgb(255, 255, 255);
 }
 
 /* have a press me sticker on the laptop! */
