@@ -3,10 +3,10 @@ import "./styles.css";
 
 function Contact() {
   return (
-    <footer>
+    <div id="contact-page">
       <p>heya@teyah.dev</p>
       <SocialButtonContainer />
-    </footer>
+    </div>
   );
 }
 
