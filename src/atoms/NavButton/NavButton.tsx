@@ -6,9 +6,20 @@ interface NavButtonProps {
 }
 
 function NavButton(props: NavButtonProps) {
+  const handleClick = () => {
+    const element = document.getElementById(props.text);
+    element?.scrollIntoView({ behavior: "smooth" });
+  };
+
   return (
     <>
-      {props.isMobile ? <></> : <a className="web-nav-button">{props.text}</a>}
+      {props.isMobile ? (
+        <></>
+      ) : (
+        <a className="web-nav-button" onClick={handleClick}>
+          {props.text}
+        </a>
+      )}
     </>
   );
 }

@@ -5,12 +5,12 @@ a {
 }
 
 .web-nav-button {
-  color: white;
+  color: rgb(108, 0, 170);
   font-size: inherit;
   font-weight: 400;
   transition-duration: 0.3s;
 }
 
 .web-nav-button:hover {
-  color: blueviolet;
+  color: rgb(198, 169, 224);
 }

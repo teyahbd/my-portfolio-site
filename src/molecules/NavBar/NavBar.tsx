@@ -4,8 +4,9 @@ import "./styles.css";
 interface NavBarProps {
   isMobile: boolean;
 }
+// should this be a list?
 function NavBar(props: NavBarProps) {
-  const navOptions = ["home", "about", "skills", "portfolio", "contact"];
+  const navOptions = ["experience", "projects", "contact"];
   return (
     <nav>
       {navOptions.map((option) => {
