@@ -1,11 +1,10 @@
-span {
-  color: purple;
+a > span {
   font-size: 40px;
   cursor: pointer;
   transition-duration: 0.3s;
 }
 
-span:hover {
+a > span:hover {
   color: pink;
-  transform: scale(0.9);
+  transform: scale(0.95);
 }

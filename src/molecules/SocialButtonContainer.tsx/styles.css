@@ -4,3 +4,7 @@
   justify-content: space-evenly;
   width: 25%;
 }
+
+#social-button-list {
+  list-style-type: none;
+}

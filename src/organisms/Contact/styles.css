@@ -7,7 +7,7 @@
   background-color: white;
 }
 
-p {
-  color: purple;
+#contact > p {
   font-size: 48px;
+  font-family: var(--header-font);
 }

@@ -4,11 +4,11 @@ section {
   display: flex;
   align-items: center;
   justify-content: center;
+  padding-bottom: 10vh;
 }
 
 #intro-text {
   height: fit-content;
-  color: rgb(108, 0, 170);
   font-size: 56px;
   padding: 1em;
   line-height: 1.2em;
