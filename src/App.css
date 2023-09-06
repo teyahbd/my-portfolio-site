@@ -4,9 +4,15 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  width: 100%;
-  height: 100%;
   color: rgba(255, 255, 255, 0.87);
-  background-color: #f481ffde;
   font-family: "Inter", sans-serif;
+}
+
+html {
+  background-color: #fbd2ffde;
+}
+
+#root {
+  display: flex;
+  flex-direction: column;
 }
