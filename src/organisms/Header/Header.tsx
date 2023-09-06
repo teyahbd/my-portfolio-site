@@ -1,4 +1,4 @@
-import NavBar from "../../components/NavBar/NavBar";
+import NavBar from "../../molecules/NavBar/NavBar";
 import "./styles.css";
 
 function Header() {
