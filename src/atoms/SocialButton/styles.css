@@ -1,0 +1,10 @@
+span {
+  color: purple;
+  font-size: 40px;
+  cursor: pointer;
+  transition-duration: 0.3s;
+}
+
+span:hover {
+  color: pink;
+}
