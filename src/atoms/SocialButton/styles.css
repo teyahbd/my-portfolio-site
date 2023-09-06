@@ -7,4 +7,5 @@ span {
 
 span:hover {
   color: pink;
+  transform: scale(0.9);
 }
