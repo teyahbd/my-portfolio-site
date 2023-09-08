@@ -1,31 +1,24 @@
 #experience {
-  color: purple;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding: 2em;
-  height: 130vh;
+  padding: var(--standard-padding-size);
+  height: 100%;
   background-image: url("../../assets/img/watercolor.png");
 }
 
 #experience > h1 {
-  font-size: 84px;
+  font-size: var(--xlarge-font-size);
   font-family: var(--header-font);
   width: 100%;
-  text-align: left;
+  text-align: right;
+  color: var(--secondary-font-color);
+  padding: var(--small-padding-size);
 }
 
-#experience-box-container {
-  display: flex;
-  width: 100%;
-  justify-content: space-evenly;
-  padding: 7em;
+@media only screen and (max-width: 1024px) {
+  #experience > h1 {
+    text-align: left;
+  }
 }
-
-/* p {
-  color: purple;
-  font-size: 32px;
-  padding: 4em;
-  text-align: center;
-} */

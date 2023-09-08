@@ -6,7 +6,7 @@ nav {
   justify-content: space-evenly;
 }
 
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 1024px) {
   nav {
     width: 100%;
   }

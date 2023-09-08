@@ -1,8 +1,9 @@
 import "./styles.css";
 
+// figure out this typing/react typing generally!
+
+// turn this into a carousel on mobile!
 function ExperienceBox({ children }) {
-  // try slots??
-  //   add icon
   return <article className="experience-box">{children}</article>;
 }
 

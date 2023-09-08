@@ -1,0 +1,13 @@
+#experience-box-container {
+  display: flex;
+  width: 100%;
+  justify-content: space-evenly;
+  padding: var(--small-padding-size);
+}
+
+@media only screen and (max-width: 1024px) {
+  #experience-box-container {
+    flex-direction: column;
+    align-items: center;
+  }
+}
