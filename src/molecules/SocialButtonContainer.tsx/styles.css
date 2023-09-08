@@ -1,8 +1,9 @@
 #social-button-list {
   display: flex;
   align-items: center;
-  justify-content: space-evenly;
-  width: 25%;
+  justify-content: space-between;
+  width: calc(4 * var(--large-font-size));
+  padding: var(--small-padding-size);
 }
 
 #social-button-list {

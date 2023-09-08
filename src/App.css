@@ -3,11 +3,12 @@
   padding: 0;
   box-sizing: border-box;
   font-family: var(--primary-font);
-  color: rgb(255, 0, 162);
+  color: var(--primary-font-color);
 }
 
 html {
-  background-color: #fbd2ff;
+  background-color: var(--primary-background-color);
+  font-size: 100%;
 }
 
 #root {
