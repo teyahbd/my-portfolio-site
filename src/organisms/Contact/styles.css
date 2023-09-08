@@ -12,4 +12,5 @@
   font-size: var(--large-font-size);
   font-family: var(--header-font);
   padding: var(--small-padding-size);
+  word-break: break-all;
 }

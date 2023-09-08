@@ -1,19 +1,37 @@
-section {
-  height: 90vh;
-  width: 100vw;
+#home {
+  height: 100%;
+  width: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
   padding-bottom: 10vh;
 }
 
+@media only screen and (max-width: 768px) {
+  #home {
+    flex-direction: column-reverse;
+    padding: var(--standard-padding-size);
+    justify-content: start;
+  }
+}
+
 #intro-text {
   height: fit-content;
-  font-size: 56px;
-  padding: 1em;
-  line-height: 1.2em;
-  width: 50vw;
+  font-size: var(--xlarge-font-size);
+  line-height: 1.4em;
+  width: 60%;
   text-align: left;
+  font-family: var(--header-font);
+  padding: calc(2 * var(--standard-padding-size));
+}
+
+@media only screen and (max-width: 768px) {
+  #intro-text {
+    padding: var(--small-padding-size);
+    width: 100%;
+    font-size: var(--large-font-size);
+    text-align: center;
+  }
 }
 
 .hover-color {
@@ -21,15 +39,24 @@ section {
   background-color: inherit;
   color: inherit;
   font-size: inherit;
+  font-family: inherit;
 }
 
 .hover-color:hover {
   color: rgb(255, 255, 255);
 }
 
-/* have a press me sticker on the laptop! */
 img {
-  height: 50vh;
+  height: 100%;
   width: min-content;
   cursor: pointer;
+  padding: calc(2 * var(--standard-padding-size));
+}
+/* have a press me sticker on the laptop! */
+
+@media only screen and (max-width: 768px) {
+  img {
+    height: 40vh;
+    padding: var(--small-padding-size);
+  }
 }

@@ -1,6 +1,6 @@
 header {
   width: 100%;
-  height: fit-content;
+  height: 10vh;
   display: flex;
   align-items: center;
   padding: var(--standard-padding-size);
