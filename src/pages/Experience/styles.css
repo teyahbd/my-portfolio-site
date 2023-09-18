@@ -2,17 +2,17 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+  justify-content: space-evenly;
   padding: var(--standard-padding-size);
-  height: 100%;
-  background-image: url("../../assets/img/watercolor.png");
+  height: 80vh;
+  background-color: var(--secondary-background-color);
+  overflow-x: clip;
 }
 
 #experience > h1 {
   font-size: var(--xlarge-font-size);
   font-family: var(--header-font);
   width: 100%;
-  text-align: right;
   color: var(--secondary-font-color);
   padding: var(--small-padding-size);
 }

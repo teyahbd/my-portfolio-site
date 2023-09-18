@@ -1,15 +1,17 @@
 .web-nav-button {
   font-size: var(--medium-font-size);
   font-weight: 500;
-  transition-duration: 0.3s;
+  transition-duration: 0.9s;
   cursor: pointer;
   width: fit-content;
   text-decoration: none;
   padding: var(--small-padding-size);
   word-break: break-all;
+  transition-duration: 0.4s;
+  text-decoration: transparent;
 }
 
 .web-nav-button:hover {
-  color: var(--secondary-font-color);
-  text-decoration: underline;
+  /* color: var(--secondary-font-color); */
+  text-decoration: yellow wavy underline;
 }

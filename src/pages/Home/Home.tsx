@@ -3,21 +3,18 @@ import "./styles.css";
 function Home() {
   return (
     <section id="home">
-      <p id="intro-text">
-        Hi, I'm <span className="hover-color">Teyah</span>! I'm a
-        <span className="hover-color"> software engineer</span> based in
-        <span className="hover-color"> Manchester</span>.
-      </p>
-      <div
-        style={{
-          width: "50vw",
-          display: "flex",
-          alignItems: "center",
-          justifyContent: "center",
-        }}
-      >
-        {/* canvas element */}
-        <img src="src/assets/img/dev.png" />
+      {/* canvas element */}
+      <div id="image-container">
+        <img src="src/assets/img/digital-nomad.png" />
+      </div>
+      <div className="intro-text-container">
+        <p className="intro-text big-text">
+          Hi, I'm <span className="hover-color">Teyah</span>!
+        </p>
+        <p className="intro-text">
+          I'm a<span className="hover-color"> software engineer</span> based in
+          <span className="hover-color"> Manchester</span>.
+        </p>
       </div>
     </section>
   );

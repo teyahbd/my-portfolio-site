@@ -2,6 +2,7 @@ a > span {
   font-size: var(--large-font-size);
   cursor: pointer;
   transition-duration: 0.3s;
+  color: var(--secondary-font-color);
 }
 
 a > span:hover {

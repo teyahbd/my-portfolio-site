@@ -13,4 +13,5 @@
   font-family: var(--header-font);
   padding: var(--small-padding-size);
   word-break: break-all;
+  color: var(--secondary-font-color);
 }

@@ -1,20 +1,33 @@
 #home {
-  height: 100%;
+  height: 90vh;
   width: 100%;
   display: flex;
   align-items: center;
-  justify-content: center;
-  padding-bottom: 10vh;
+  flex-direction: column;
 }
 
-#intro-text {
+.intro-text {
   height: fit-content;
-  font-size: var(--xlarge-font-size);
+  font-size: 56px;
   line-height: 1.4em;
-  width: 60%;
-  text-align: left;
+  font-family: var(--primary-font);
+  color: var(--primary-background-color);
+}
+
+.big-text {
+  font-size: 84px;
   font-family: var(--header-font);
-  padding: calc(2 * var(--standard-padding-size));
+}
+
+.intro-text-container {
+  padding: var(--standard-padding-size);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: start;
+  width: 100%;
+  height: 60vh;
+  background-color: white;
 }
 
 .hover-color {
@@ -23,17 +36,26 @@
   color: inherit;
   font-size: inherit;
   font-family: inherit;
+  transition-duration: 0.4s;
+  text-decoration: transparent;
+  text-decoration-skip-ink: none;
 }
 
 .hover-color:hover {
-  color: rgb(255, 255, 255);
+  text-decoration: yellow wavy underline;
+}
+
+#image-container {
+  height: 50vh;
+  display: flex;
+  justify-content: center;
+  align-items: end;
+  /* background: radial-gradient(#ffdf296b, transparent); */
 }
 
 img {
-  height: 100%;
-  width: min-content;
   cursor: pointer;
-  padding: calc(2 * var(--standard-padding-size));
+  height: 80%;
 }
 /* have a press me sticker on the laptop! */
 
