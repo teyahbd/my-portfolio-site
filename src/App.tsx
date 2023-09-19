@@ -1,6 +1,6 @@
 import "./App.css";
 import ScrollContainer from "./organisms/ScrollContainer/ScrollContainer";
-import StaticHeader from "./organisms/StaticHeader/StaticHeader";
+import StaticHeader from "./organisms/StaticInfo/StaticInfo";
 
 function App() {
   return (

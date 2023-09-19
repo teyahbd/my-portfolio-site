@@ -3,6 +3,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Belanosima&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Figtree&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap");
 
 :root {
   font-synthesis: none;
@@ -10,12 +11,12 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   -webkit-text-size-adjust: 100%;
-  --header-font: "Calistoga", cursive;
-  --primary-font: "IBM Plex Sans", sans-serif;
-  --primary-background-color: #160025;
+  --header-font: "Playfair Display", serif;
+  --primary-font: Georgia, "Times New Roman", Times, serif;
+  --primary-background-color: #dcffc7;
   --secondary-background-color: white;
-  --primary-font-color: rgb(255, 255, 255);
-  --secondary-font-color: #ffabcb;
+  --primary-font-color: rgb(0, 0, 0);
+  --secondary-font-color: black;
   --tertiary-font-color: rgb(255, 204, 0);
   --small-font-size: 1rem;
   --medium-font-size: 1.25rem;

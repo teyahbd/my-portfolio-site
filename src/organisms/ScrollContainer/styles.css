@@ -1,5 +1,19 @@
 #scroll-container {
-  background-color: red;
-  height: 300vh;
-  width: 60vw;
+  height: 100%;
+  width: 50vw;
+  padding: 5rem;
+}
+
+h2 {
+  font-family: var(--header-font);
+  font-size: var(--large-font-size);
+}
+
+.project-box {
+  width: 100%;
+  padding: var(--standard-padding-size);
+  height: 20vh;
+  border: 0.5px solid black;
+  margin: var(--standard-padding-size);
+  cursor: pointer;
 }
