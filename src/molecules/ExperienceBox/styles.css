@@ -1,6 +1,6 @@
 .experience-box {
   min-height: 100%;
-  width: 300px;
+  /* width: 300px; */
   transition: all 0.2s ease-in-out;
   display: flex;
   flex-direction: column;
@@ -12,7 +12,7 @@
 
 @media only screen and (max-width: 1024px) {
   .experience-box {
-    width: calc(100vw - 2 * var(--standard-padding-size));
+    /* width: calc(100vw - 2 * var(--standard-padding-size)); */
     height: 80vw;
     padding: 0;
     scroll-snap-align: center;

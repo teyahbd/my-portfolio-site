@@ -3,17 +3,33 @@ header {
   width: 50vw;
   position: sticky;
   top: 0;
-  padding: 5rem;
+  padding: calc(4 * var(--standard-padding-size));
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   align-items: start;
+  /* background-image: url("../../assets/img/flower.svg"); */
+  background-size: cover;
 }
 
-header > h1 {
+#name-title > h1 {
   font-family: var(--header-font);
-  font-size: 64px;
+  font-size: 84px;
   text-align: left;
+}
+
+#name-title {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+#web-social-button-container {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 1.5rem;
 }
 
 #email {
@@ -22,4 +38,20 @@ header > h1 {
   padding: var(--small-padding-size);
   word-break: break-all;
   color: var(--secondary-font-color);
+}
+
+@media only screen and (max-width: 1024px) {
+  header {
+    position: static;
+    width: 100%;
+    padding: calc(2 * var(--standard-padding-size));
+    justify-content: center;
+    align-items: center;
+  }
+  header > h1 {
+    text-align: center;
+  }
+  #web-social-button-container {
+    display: none;
+  }
 }

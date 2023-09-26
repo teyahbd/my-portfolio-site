@@ -2,8 +2,9 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  width: calc(4 * var(--large-font-size));
+  width: fit-content;
   padding: var(--small-padding-size);
+  font-size: inherit;
 }
 
 #social-button-list {

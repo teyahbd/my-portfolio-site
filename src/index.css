@@ -4,6 +4,7 @@
 @import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Figtree&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Mooli&display=swap");
 
 :root {
   font-synthesis: none;
@@ -12,16 +13,19 @@
   -moz-osx-font-smoothing: grayscale;
   -webkit-text-size-adjust: 100%;
   --header-font: "Playfair Display", serif;
-  --primary-font: Georgia, "Times New Roman", Times, serif;
-  --primary-background-color: #dcffc7;
-  --secondary-background-color: white;
-  --primary-font-color: rgb(0, 0, 0);
+  /* make secondary times if using playfair */
+  --primary-font: font-family: "Mooli", sans-serif;
+  --primary-background-color: #dce8ff;
+  --secondary-background-color: #89abe3;
+  --primary-font-color: rgb(255, 255, 255);
   --secondary-font-color: black;
   --tertiary-font-color: rgb(255, 204, 0);
   --small-font-size: 1rem;
   --medium-font-size: 1.25rem;
+  --medlar-font-size: 2rem;
   --large-font-size: 3rem;
   --xlarge-font-size: 4rem;
   --standard-padding-size: 16px;
   --small-padding-size: 8px;
+  --standard-line-height: 150%;
 }

@@ -1,18 +1,13 @@
 import NavButton from "../../atoms/NavButton/NavButton";
 import "./styles.css";
 
-interface NavBarProps {
-  isMobile: boolean;
-}
 // should this be a list?
-function NavBar(props: NavBarProps) {
-  const navOptions = ["experience", "projects", "contact"];
+function NavBar() {
+  const navOptions = ["about", "experience", "projects"];
   return (
     <nav>
       {navOptions.map((option) => {
-        return (
-          <NavButton text={option} isMobile={props.isMobile} key={option} />
-        );
+        return <NavButton text={option} key={option} />;
       })}
     </nav>
   );

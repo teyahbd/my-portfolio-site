@@ -1,7 +1,17 @@
 #scroll-container {
-  height: 100%;
   width: 50vw;
-  padding: 5rem;
+  padding: calc(4 * var(--standard-padding-size));
+  /* background: linear-gradient(
+    45deg,
+    #c7f5fe 10%,
+    #c7f5fe 40%,
+    #fcc8f8 40%,
+    #fcc8f8 60%,
+    #eab4f8 60%,
+    #eab4f8 65%,
+    #f3f798 65%,
+    #f3f798 90%
+  ); */
 }
 
 h2 {
@@ -10,10 +20,38 @@ h2 {
 }
 
 .project-box {
-  width: 100%;
   padding: var(--standard-padding-size);
   height: 20vh;
   border: 0.5px solid black;
   margin: var(--standard-padding-size);
   cursor: pointer;
+}
+
+#credit-footer {
+  padding: var(--standard-padding-size);
+}
+
+#sparkle-icon {
+  font-size: var(--medium-font-size);
+  padding: var(--small-padding-size);
+}
+
+#mobile-social-button-container {
+  display: none;
+}
+
+.year {
+  font-family: var(--header-font);
+  font-size: var(--large-font-size);
+}
+
+@media only screen and (max-width: 1024px) {
+  #scroll-container {
+    width: 100%;
+    padding: calc(2 * var(--standard-padding-size));
+    /* background-color: var(--secondary-background-color); */
+  }
+  #mobile-social-button-container {
+    display: block;
+  }
 }
