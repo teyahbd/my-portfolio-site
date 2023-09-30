@@ -234,7 +234,7 @@ function ScrollContainer(props: ScrollContainer) {
         );
       })}
       <div id="mobile-social-button-container">
-        <Email />
+        <Email emailAddress={props.info.email ?? ""} />
         <LinkButtonContainer icons={icons} />
       </div>
       {/* TODO: use dynamic name here */}

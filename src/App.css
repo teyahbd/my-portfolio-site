@@ -20,9 +20,9 @@ html {
   left: 5vh;
   background: linear-gradient(
     -135deg,
-    rgb(119, 255, 137) 0%,
-    rgb(119, 255, 246) 70%,
-    rgb(219, 101, 255) 100%
+    rgb(119, 255, 244) 0%,
+    rgb(238, 155, 255) 70%,
+    rgb(255, 209, 101) 100%
   );
   width: 25rem;
   height: 25rem;

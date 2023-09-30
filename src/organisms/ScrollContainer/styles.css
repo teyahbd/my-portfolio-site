@@ -19,6 +19,10 @@ h2 {
   font-size: var(--large-font-size);
 }
 
+.project-name {
+  color: rgb(130, 85, 138);
+}
+
 .project-box {
   padding: var(--standard-padding-size);
   height: 20vh;

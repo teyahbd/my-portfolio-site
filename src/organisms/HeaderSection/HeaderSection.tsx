@@ -3,11 +3,11 @@ import { LinkType } from "../../atoms/LinkButton/LinkButton";
 import LinkButtonContainer from "../../molecules/LinkButtonContainer.tsx/LinkButtonContainer";
 import "./styles.css";
 
-interface StaticInfo {
+interface HeaderSection {
   info: { [key: string]: string };
 }
 
-function StaticInfo(props: StaticInfo) {
+function HeaderSection(props: HeaderSection) {
   const icons: LinkType[] = [
     {
       name: "github",
@@ -34,4 +34,4 @@ function StaticInfo(props: StaticInfo) {
   );
 }
 
-export default StaticInfo;
+export default HeaderSection;

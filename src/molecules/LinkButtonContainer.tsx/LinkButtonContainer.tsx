@@ -10,7 +10,7 @@ function LinkButtonContainer(props: Links) {
     <ul id="link-button-list">
       {props.icons.map((icon) => {
         return (
-          <li>
+          <li key={icon.name}>
             <LinkButton name={`${icon.name}`} link={`${icon.link}`} />
           </li>
         );

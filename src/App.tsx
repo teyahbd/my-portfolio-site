@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import "./App.css";
 import ScrollContainer from "./organisms/ScrollContainer/ScrollContainer";
-import StaticInfo from "./organisms/StaticInfo/StaticInfo";
+import StaticInfo from "./organisms/HeaderSection/HeaderSection";
 import { fetchDescription, fetchInfo, fetchProjects } from "./api";
 
 const introRecordId = import.meta.env.VITE_INTRO_RECORD_ID;
@@ -36,7 +36,6 @@ function App() {
           projectYears[year] = [...currentValues, project];
         }
       });
-      console.log(projectYears);
       setProjects(projectYears);
       // TODO: catch errors
     });
