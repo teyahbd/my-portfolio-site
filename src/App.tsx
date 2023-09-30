@@ -2,8 +2,11 @@ import { useEffect, useState } from "react";
 import "./App.css";
 import ScrollContainer from "./organisms/ScrollContainer/ScrollContainer";
 import StaticInfo from "./organisms/StaticInfo/StaticInfo";
-import { fetchIntro, fetchProjects } from "./api";
+import { fetchDescription, fetchProjects } from "./api";
 
+const introRecordId = import.meta.env.VITE_INTRO_RECORD_ID;
+
+// TODO: add timeout or error page
 function App() {
   const [isLoading, setIsLoading] = useState(true);
   // loading
@@ -34,8 +37,9 @@ function App() {
       });
       console.log(projectYears);
       setProjects(projectYears);
+      // TODO: catch errors
     });
-    fetchIntro().then((intro) => {
+    fetchDescription(introRecordId).then((intro) => {
       setIntro(intro.fields.Description);
       setIsLoading(false);
     });
