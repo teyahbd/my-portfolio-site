@@ -2,12 +2,13 @@ import { useEffect, useState } from "react";
 import "./App.css";
 import ScrollContainer from "./organisms/ScrollContainer/ScrollContainer";
 import StaticInfo from "./organisms/StaticInfo/StaticInfo";
-import { fetchDescription, fetchProjects } from "./api";
+import { fetchDescription, fetchInfo, fetchProjects } from "./api";
 
 const introRecordId = import.meta.env.VITE_INTRO_RECORD_ID;
 
 // TODO: add timeout or error page
 function App() {
+  const [personalInfo, setPersonalInfo] = useState({});
   const [isLoading, setIsLoading] = useState(true);
   // loading
   const [projects, setProjects] = useState({
@@ -29,7 +30,7 @@ function App() {
       };
 
       projects.forEach((project) => {
-        const year = project.fields.Year;
+        const year = project.fields.year;
         const currentValues = projectYears[year] ?? null;
         if (currentValues) {
           projectYears[year] = [...currentValues, project];
@@ -39,8 +40,15 @@ function App() {
       setProjects(projectYears);
       // TODO: catch errors
     });
+    fetchInfo().then((info) => {
+      const infoObj: { [key: string]: string } = {};
+      info.forEach((item) => {
+        infoObj[item.fields.name] = item.fields.value;
+      });
+      setPersonalInfo(infoObj);
+    });
     fetchDescription(introRecordId).then((intro) => {
-      setIntro(intro.fields.Description);
+      setIntro(intro.fields.description);
       setIsLoading(false);
     });
   }, []);
@@ -55,8 +63,12 @@ function App() {
         <></>
       ) : (
         <div id="main-page">
-          <StaticInfo />
-          <ScrollContainer projects={projects} intro={intro} />
+          <StaticInfo info={personalInfo} />
+          <ScrollContainer
+            projects={projects}
+            intro={intro}
+            info={personalInfo}
+          />
         </div>
       )}
     </>

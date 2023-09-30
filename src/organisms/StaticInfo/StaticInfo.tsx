@@ -1,8 +1,25 @@
 import Email from "../../atoms/Email/Email";
-import SocialButtonContainer from "../../molecules/SocialButtonContainer.tsx/SocialButtonContainer";
+import { LinkType } from "../../atoms/LinkButton/LinkButton";
+import LinkButtonContainer from "../../molecules/LinkButtonContainer.tsx/LinkButtonContainer";
 import "./styles.css";
 
-function StaticInfo() {
+interface StaticInfo {
+  info: { [key: string]: string };
+}
+
+function StaticInfo(props: StaticInfo) {
+  const icons: LinkType[] = [
+    {
+      name: "github",
+      link: props.info.github_profile_url ?? "https://github.com/teyahbd/",
+    },
+    {
+      name: "linkedin",
+      link:
+        props.info.linkedin_profile_url ??
+        "https://www.linkedin.com/in/teyah-brennen-davies/",
+    },
+  ];
   return (
     <header className="fade-in-quick">
       <div id="name-title">
@@ -11,7 +28,7 @@ function StaticInfo() {
       </div>
       <div id="web-social-button-container">
         <Email />
-        <SocialButtonContainer />
+        <LinkButtonContainer icons={icons} />
       </div>
     </header>
   );
