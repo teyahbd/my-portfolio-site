@@ -1,21 +1,20 @@
 import CreditFooter from "../../atoms/CreditFooter/CreditFooter";
 import ContactFooter from "../../organisms/ContactFooter/ContactFooter";
-import IntroContainer from "../../molecules/IntroContainer/IntroContainer";
 import Project from "../../molecules/Project/Project";
 import "./styles.css";
 import { Info } from "../../App";
+import IntroParagraph from "../../atoms/IntroParagraph/IntroParagraph";
 
 interface ScrollContainer {
   intro: string;
   projects: object;
-  // TODO: make info interface
   info: Info;
 }
 
 function ScrollContainer(props: ScrollContainer) {
   return (
     <div id="scroll-container" className="fade-in-slow">
-      <IntroContainer introText={props.intro} />
+      <IntroParagraph text={props.intro} />
       {props.projects["2023"].length > 0 ? (
         <h4 className="year">- 2023 -</h4>
       ) : (
