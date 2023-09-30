@@ -1,7 +1,7 @@
 import "./styles.css";
 
-function Email() {
-  return <p id="email">heya@teyah.dev</p>;
+function Email(props: { emailAddress: string }) {
+  return <p id="email">{props.emailAddress}</p>;
 }
 
 export default Email;

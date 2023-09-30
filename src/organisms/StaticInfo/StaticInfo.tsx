@@ -23,11 +23,11 @@ function StaticInfo(props: StaticInfo) {
   return (
     <header className="fade-in-quick">
       <div id="name-title">
-        <h1>Teyah Brennen-Davies</h1>
-        <h2>software engineer</h2>
+        <h1>{props.info.name ?? "Teyah"}</h1>
+        <h2>{(props.info.job_title ?? "software engineer").toLowerCase()}</h2>
       </div>
       <div id="web-social-button-container">
-        <Email />
+        <Email emailAddress={props.info.email ?? ""} />
         <LinkButtonContainer icons={icons} />
       </div>
     </header>
