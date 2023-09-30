@@ -1,50 +1,14 @@
-import { useEffect, useState } from "react";
-import { fetchIntro, fetchProjects } from "../../api";
 import Email from "../../atoms/Email/Email";
 import IntroContainer from "../../molecules/IntroContainer/IntroContainer";
 import Project from "../../molecules/Project/Project";
 import SocialButtonContainer from "../../molecules/SocialButtonContainer.tsx/SocialButtonContainer";
 import "./styles.css";
 
-function ScrollContainer() {
-  // loading
-  const [projects, setProjects] = useState({
-    2023: [],
-    2022: [],
-    2021: [],
-    2020: [],
-    2019: [],
-  });
-  const [intro, setIntro] = useState("");
-  useEffect(() => {
-    fetchProjects().then((projects) => {
-      const projectYears: any = {
-        2023: [],
-        2022: [],
-        2021: [],
-        2020: [],
-        2019: [],
-      };
-
-      projects.forEach((project) => {
-        const year = project.fields.Year;
-        const currentValues = projectYears[year] ?? null;
-        if (currentValues) {
-          projectYears[year] = [...currentValues, project];
-        }
-      });
-      console.log(projectYears);
-      setProjects(projectYears);
-    });
-    fetchIntro().then((intro) => {
-      setIntro(intro.fields.Description);
-    });
-  }, []);
-
+function ScrollContainer({ projects, intro }) {
   const years = [2023, 2022, 2021, 2020, 2019];
 
   return (
-    <div id="scroll-container">
+    <div id="scroll-container" className="fade-in-slow">
       <IntroContainer introText={intro} />
       {projects["2023"].length > 0 ? <h4 className="year">- 2023 -</h4> : <></>}
       {projects["2023"].map((project: any) => {
