@@ -15,9 +15,9 @@
   --header-font: "Playfair Display", serif;
   /* make secondary times if using playfair */
   --primary-font: font-family: "Mooli", sans-serif;
-  --primary-background-color: #dce8ff;
+  --primary-background-color: rgb(229, 255, 246);
   --secondary-background-color: #89abe3;
-  --primary-font-color: rgb(255, 255, 255);
+  --primary-font-color: rgb(0, 0, 0);
   --secondary-font-color: black;
   --tertiary-font-color: rgb(255, 204, 0);
   --small-font-size: 1rem;

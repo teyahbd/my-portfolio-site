@@ -9,28 +9,45 @@
 
 html {
   background-color: var(--primary-background-color);
-  /* background: radial-gradient(100% 244.46% at 0% 0%, #ccff00 0%, #ff027c 100%),
-    radial-gradient(50% 122.23% at 50% 50%, #9aa4ff 0%, #306c00 100%),
-    radial-gradient(100.45% 245.58% at 0% 0%, #000afe 0%, #70ff00 100%),
-    linear-gradient(127.43deg, #7b0007 0%, #8f73ff 100%);
-  background-blend-mode: lighten, color-dodge, difference, normal; */
-  /* background: linear-gradient(180deg, #ffb7b7 0%, #727272 100%),
-    radial-gradient(60.91% 100% at 50% 0%, #ffd1d1 0%, #260000 100%),
-    linear-gradient(238.72deg, #ffdddd 0%, #720066 100%),
-    linear-gradient(127.43deg, #00ffff 0%, #ff4444 100%),
-    radial-gradient(100.22% 100% at 70.57% 0%, #ff0000 0%, #00ffe0 100%),
-    linear-gradient(127.43deg, #b7d500 0%, #3300ff 100%);
-  background-blend-mode: screen, overlay, hard-light, color-burn, color-dodge,
-    normal; */
-  /* background: linear-gradient(125.95deg, #c700bf 10.95%, #7da900 100%),
-    linear-gradient(341.1deg, #00c2ff 7.52%, #4e00b1 77.98%),
-    linear-gradient(222.34deg, #a90000 12.99%, #00ffe0 87.21%),
-    linear-gradient(130.22deg, #8fa600 18.02%, #5a31ff 100%);
-  background-blend-mode: screen, color-dodge, color-dodge, normal; */
   font-size: 100%;
   height: 100%;
   width: 100%;
-  /* background-image: url("./assets/img/bgd.png"); */
+}
+
+#background-color {
+  position: fixed;
+  top: 10vh;
+  left: 5vh;
+  background: linear-gradient(
+    -135deg,
+    rgb(119, 255, 137) 0%,
+    rgb(119, 255, 246) 70%,
+    rgb(219, 101, 255) 100%
+  );
+  width: 25rem;
+  height: 25rem;
+  border-radius: 50%;
+  z-index: -1;
+  -webkit-animation: spin 30s linear infinite;
+  animation: spin 30s linear infinite;
+}
+
+@-webkit-keyframes spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+  }
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
 }
 
 #root {
@@ -47,5 +64,38 @@ html {
 @media only screen and (max-width: 1024px) {
   #main-page {
     flex-direction: column;
+  }
+}
+
+.fade-in-quick {
+  animation: fadeInAnimation ease 1s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+}
+
+@keyframes fadeInAnimation {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.fade-in-slow {
+  animation: fadeInSlowAnimation ease 2s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+}
+
+@keyframes fadeInSlowAnimation {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
   }
 }

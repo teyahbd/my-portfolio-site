@@ -8,8 +8,6 @@ header {
   flex-direction: column;
   justify-content: space-between;
   align-items: start;
-  /* background-image: url("../../assets/img/flower.svg"); */
-  background-size: cover;
 }
 
 #name-title > h1 {

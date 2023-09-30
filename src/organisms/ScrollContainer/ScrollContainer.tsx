@@ -5,13 +5,11 @@ import SocialButtonContainer from "../../molecules/SocialButtonContainer.tsx/Soc
 import "./styles.css";
 
 function ScrollContainer({ projects, intro }) {
-  const years = [2023, 2022, 2021, 2020, 2019];
-
   return (
     <div id="scroll-container" className="fade-in-slow">
       <IntroContainer introText={intro} />
       {projects["2023"].length > 0 ? <h4 className="year">- 2023 -</h4> : <></>}
-      {projects["2023"].map((project: any) => {
+      {projects["2023"].map((project) => {
         const hasGithubLink = project.fields["Repo Link"];
         const hasHostedLink = project.fields["Hosted Link"];
         return (
@@ -48,7 +46,7 @@ function ScrollContainer({ projects, intro }) {
         );
       })}
       {projects["2022"].length > 0 ? <h4 className="year">- 2022 -</h4> : <></>}
-      {projects["2022"].map((project: any) => {
+      {projects["2022"].map((project) => {
         const hasGithubLink = project.fields["Repo Link"];
         const hasHostedLink = project.fields["Hosted Link"];
         return (
@@ -85,7 +83,7 @@ function ScrollContainer({ projects, intro }) {
         );
       })}
       {projects["2021"].length > 0 ? <h4 className="year">- 2021 -</h4> : <></>}
-      {projects["2021"].map((project: any) => {
+      {projects["2021"].map((project) => {
         const hasGithubLink = project.fields["Repo Link"];
         const hasHostedLink = project.fields["Hosted Link"];
         return (
@@ -122,7 +120,7 @@ function ScrollContainer({ projects, intro }) {
         );
       })}
       {projects["2020"].length > 0 ? <h4 className="year">- 2020 -</h4> : <></>}
-      {projects["2020"].map((project: any) => {
+      {projects["2020"].map((project) => {
         const hasGithubLink = project.fields["Repo Link"];
         const hasHostedLink = project.fields["Hosted Link"];
         return (
@@ -160,7 +158,7 @@ function ScrollContainer({ projects, intro }) {
       })}
       {projects["2019"].length > 0 ? <h4 className="year">- 2019 -</h4> : <></>}
 
-      {projects["2019"].map((project: any) => {
+      {projects["2019"].map((project) => {
         const hasGithubLink = project.fields["Repo Link"];
         const hasHostedLink = project.fields["Hosted Link"];
         return (
