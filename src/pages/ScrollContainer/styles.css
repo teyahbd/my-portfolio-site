@@ -31,19 +31,6 @@ h2 {
   cursor: pointer;
 }
 
-#credit-footer {
-  padding: var(--standard-padding-size);
-}
-
-#sparkle-icon {
-  font-size: var(--medium-font-size);
-  padding: var(--small-padding-size);
-}
-
-#mobile-social-button-container {
-  display: none;
-}
-
 .year {
   font-family: var(--header-font);
   font-size: var(--large-font-size);
@@ -55,7 +42,11 @@ h2 {
     padding: calc(2 * var(--standard-padding-size));
     /* background-color: var(--secondary-background-color); */
   }
-  #mobile-social-button-container {
-    display: block;
+  #mobile-circle {
+    z-index: -1;
+    width: 20rem;
+    height: 10rem;
+    background-color: #48abe0;
+    border-radius: 10rem 10rem 0 0;
   }
 }

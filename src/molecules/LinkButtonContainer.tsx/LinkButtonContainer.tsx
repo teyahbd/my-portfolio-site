@@ -1,13 +1,13 @@
-import LinkButton, { LinkType } from "../../atoms/LinkButton/LinkButton";
+import LinkButton, { LinkButtonProps } from "../../atoms/LinkButton/LinkButton";
 import "./styles.css";
 
-export interface Links {
-  icons: LinkType[];
+export interface LinkButtonContainerProps {
+  icons: LinkButtonProps[];
 }
 
-function LinkButtonContainer(props: Links) {
+function LinkButtonContainer(props: LinkButtonContainerProps) {
   return (
-    <ul id="link-button-list">
+    <ul className="link-button-list">
       {props.icons.map((icon) => {
         return (
           <li key={icon.name}>

@@ -31,15 +31,6 @@ header {
   text-align: left;
 }
 
-#web-contact-container {
-  display: flex;
-  width: 100%;
-  align-items: center;
-  justify-content: space-between;
-  font-size: var(--medlar-font-size);
-  padding: var(--small-padding-size);
-}
-
 @media only screen and (max-width: 1024px) {
   header {
     position: static;
@@ -55,8 +46,5 @@ header {
   #name-title-container > h2 {
     font-size: var(--medlar-font-size);
     text-align: center;
-  }
-  #web-contact-container {
-    display: none;
   }
 }

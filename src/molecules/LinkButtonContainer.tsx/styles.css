@@ -1,11 +1,15 @@
-#link-button-list {
+.link-button-list {
   display: flex;
   align-items: center;
   justify-content: space-between;
   width: fit-content;
+  padding: var(--small-padding-size);
   font-size: inherit;
+  list-style-type: none;
 }
 
-#link-button-list {
-  list-style-type: none;
+@media only screen and (max-width: 1024px) {
+  .link-button-list {
+    width: 50%;
+  }
 }

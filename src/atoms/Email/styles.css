@@ -5,17 +5,3 @@
   word-break: break-all;
   color: var(--secondary-font-color);
 }
-
-@media only screen and (max-width: 1024px) {
-  #email {
-    font-size: var(--medium-font-size) !important;
-  }
-}
-
-#email {
-  font-size: var(--normal-font-size);
-  font-family: var(--header-font);
-  padding: var(--small-padding-size);
-  word-break: break-all;
-  color: var(--secondary-font-color);
-}

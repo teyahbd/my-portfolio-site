@@ -1,0 +1,19 @@
+#credit-footer {
+  padding: calc(3 * var(--small-padding-size));
+  color: var(--tertiary-font-color);
+}
+
+#footer-icon {
+  font-size: var(--medium-font-size);
+  padding: var(--small-padding-size);
+  display: none;
+}
+
+@media only screen and (max-width: 1024px) {
+  #footer-icon {
+    display: block;
+  }
+  #credit-footer {
+    padding: var(--small-padding-size);
+  }
+}

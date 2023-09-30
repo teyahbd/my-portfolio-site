@@ -1,29 +1,18 @@
-import Email from "../../atoms/Email/Email";
-import { LinkType } from "../../atoms/LinkButton/LinkButton";
+import CreditFooter from "../../atoms/CreditFooter/CreditFooter";
+import ContactFooter from "../../organisms/ContactFooter/ContactFooter";
 import IntroContainer from "../../molecules/IntroContainer/IntroContainer";
-import LinkButtonContainer from "../../molecules/LinkButtonContainer.tsx/LinkButtonContainer";
 import Project from "../../molecules/Project/Project";
 import "./styles.css";
+import { Info } from "../../App";
 
 interface ScrollContainer {
   intro: string;
   projects: object;
-  info: { [key: string]: string };
+  // TODO: make info interface
+  info: Info;
 }
 
 function ScrollContainer(props: ScrollContainer) {
-  const icons: LinkType[] = [
-    {
-      name: "github",
-      link: props.info.github_profile_url ?? "https://github.com/teyahbd/",
-    },
-    {
-      name: "linkedin",
-      link:
-        props.info.linkedin_profile_url ??
-        "https://www.linkedin.com/in/teyah-brennen-davies/",
-    },
-  ];
   return (
     <div id="scroll-container" className="fade-in-slow">
       <IntroContainer introText={props.intro} />
@@ -233,13 +222,12 @@ function ScrollContainer(props: ScrollContainer) {
           </Project>
         );
       })}
-      <div id="mobile-social-button-container">
-        <Email emailAddress={props.info.email ?? ""} />
-        <LinkButtonContainer icons={icons} />
-      </div>
-      {/* TODO: use dynamic name here */}
-      <p id="credit-footer">© 2023 {props.info.name ?? "Teyah"}</p>
-      {/* <p id="sparkle-icon">✨</p> */}
+      <ContactFooter
+        email={props.info.email ?? ""}
+        info={props.info}
+        forMobile={true}
+      />
+      <CreditFooter name={props.info.name ?? "Teyah"} />
     </div>
   );
 }
