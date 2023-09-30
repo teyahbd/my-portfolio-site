@@ -22,11 +22,11 @@ function HeaderSection(props: HeaderSection) {
   ];
   return (
     <header className="fade-in-quick">
-      <div id="name-title">
+      <div id="name-title-container">
         <h1>{props.info.name ?? "Teyah"}</h1>
         <h2>{(props.info.job_title ?? "software engineer").toLowerCase()}</h2>
       </div>
-      <div id="web-social-button-container">
+      <div id="web-contact-container">
         <Email emailAddress={props.info.email ?? ""} />
         <LinkButtonContainer icons={icons} />
       </div>

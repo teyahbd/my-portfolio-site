@@ -3,7 +3,6 @@
   align-items: center;
   justify-content: space-between;
   width: fit-content;
-  padding: var(--small-padding-size);
   font-size: inherit;
 }
 

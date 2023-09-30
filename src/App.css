@@ -5,6 +5,7 @@
   font-family: var(--primary-font);
   color: var(--primary-font-color);
   text-align: center;
+  word-break: break-word;
 }
 
 html {
@@ -83,7 +84,7 @@ html {
 }
 
 .fade-in-slow {
-  animation: fadeInSlowAnimation ease 2s;
+  animation: fadeInSlowAnimation ease 1.5s;
   animation-iteration-count: 1;
   animation-fill-mode: forwards;
 }
