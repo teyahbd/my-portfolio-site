@@ -2,18 +2,11 @@ a > span {
   font-size: inherit;
   cursor: pointer;
   transition-duration: 0.3s;
-  color: var(--secondary-font-color);
+  color: inherit;
   padding: var(--small-padding-size);
 }
 
 a > span:hover {
   color: var(--tertiary-font-color);
   transform: scale(0.95);
-}
-
-@media only screen and (max-width: 1024px) {
-  a > span {
-    padding: 0;
-    font-size: var(--medlar-font-size);
-  }
 }

@@ -8,7 +8,13 @@ export interface LinkButtonProps {
 function LinkButton(props: LinkButtonProps) {
   return (
     <a href={props.link} target="_blank">
-      <span className={`fa-brands fa-${props.name}`}></span>
+      <span
+        className={
+          props.name === "globe"
+            ? "fa-solid fa-globe"
+            : `fa-brands fa-${props.name}`
+        }
+      ></span>
     </a>
   );
 }
