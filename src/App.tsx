@@ -8,6 +8,17 @@ const introRecordId = import.meta.env.VITE_INTRO_RECORD_ID;
 
 // TODO: add timeout or error page
 
+interface Fields {
+  name: string;
+  value: string;
+}
+
+interface InfoTableItem {
+  createdTime: string;
+  id: string;
+  fields: Fields;
+}
+
 export interface Info {
   name: string | undefined;
   job_title: string | undefined;
@@ -33,7 +44,7 @@ export interface Project {
 
 function App() {
   const emptyProjects: ProjectFields[] = [];
-  const [personalInfo, setPersonalInfo] = useState({
+  const [personalInfo, setPersonalInfo] = useState<Info>({
     name: undefined,
     job_title: undefined,
     linkedin_profile_url: undefined,
@@ -55,9 +66,16 @@ function App() {
       // TODO: catch errors
     });
     fetchInfo().then((info) => {
-      const infoObj: Info = {};
-      info.forEach((item) => {
-        infoObj[item.fields.name] = item.fields.value;
+      console.log(info);
+      const infoObj: Info = {
+        name: "",
+        job_title: "",
+        linkedin_profile_url: "",
+        github_profile_url: "",
+        email: "",
+      };
+      info.forEach((item: InfoTableItem) => {
+        infoObj[item.fields.name as keyof Info] = item.fields.value;
       });
       setPersonalInfo(infoObj);
     });
