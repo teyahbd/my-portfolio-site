@@ -19,10 +19,6 @@ h2 {
   font-size: var(--large-font-size);
 }
 
-.project-name {
-  color: rgb(130, 85, 138);
-}
-
 .project-box {
   padding: var(--standard-padding-size);
   height: 20vh;
@@ -36,17 +32,50 @@ h2 {
   font-size: var(--large-font-size);
 }
 
+p > span {
+  font-family: var(--primary-font);
+  line-height: var(--standard-line-height);
+  font-size: var(--medium-font-size);
+  font-weight: bold;
+}
+
+p > span:hover {
+  color: rgb(255, 136, 255);
+}
+
+p {
+  font-family: var(--primary-font);
+  line-height: var(--standard-line-height);
+  font-size: var(--medium-font-size);
+}
+
+.separator {
+  text-align: center;
+  color: var(--primary-font-color);
+  padding: var(--standard-padding-size);
+}
+
+#mini-ombre-circle {
+  background: linear-gradient(
+    -135deg,
+    rgb(119, 255, 244) 0%,
+    rgb(238, 155, 255) 70%,
+    rgb(255, 209, 101) 100%
+  );
+  width: 2rem;
+  height: 2rem;
+  border-radius: 50%;
+}
+
+#ombre-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 @media only screen and (max-width: 1024px) {
   #scroll-container {
     width: 100%;
     padding: calc(2 * var(--standard-padding-size));
-    /* background-color: var(--secondary-background-color); */
-  }
-  #mobile-circle {
-    z-index: -1;
-    width: 20rem;
-    height: 10rem;
-    background-color: #48abe0;
-    border-radius: 10rem 10rem 0 0;
   }
 }
