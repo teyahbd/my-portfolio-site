@@ -1,6 +1,13 @@
+footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 #credit-footer {
   padding: calc(3 * var(--small-padding-size));
-  color: var(--tertiary-font-color);
+  color: var(--primary-font-color);
+  font-size: var(--small-font-size);
 }
 
 #footer-icon {
