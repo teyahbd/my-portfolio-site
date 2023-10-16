@@ -1,9 +1,11 @@
 import { Info } from "../../App";
+import IntroParagraph from "../../atoms/IntroParagraph/IntroParagraph";
 import ContactFooter from "../../organisms/ContactFooter/ContactFooter";
 import "./styles.css";
 
 interface HeaderSection {
   info: Info;
+  intro: string;
 }
 
 function HeaderSection(props: HeaderSection) {
@@ -18,6 +20,7 @@ function HeaderSection(props: HeaderSection) {
         info={props.info}
         forMobile={false}
       />
+      <IntroParagraph text={props.intro ?? "Teyah"} forMobile={true} />
     </header>
   );
 }

@@ -13,7 +13,7 @@ header {
 #name-title-container {
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
+  align-items: center;
 }
 
 #name-title-container > h1 {
@@ -21,11 +21,13 @@ header {
   font-size: var(--xxlarge-font-size);
   text-align: left;
   padding: var(--standard-padding-size);
+  padding-bottom: 0;
   width: 100%;
 }
 
 #name-title-container > h2 {
   padding: var(--standard-padding-size);
+  padding-top: var(--small-padding-size);
   font-size: var(--large-font-size);
   width: 100%;
   text-align: left;
@@ -36,7 +38,7 @@ header {
     position: static;
     width: 100%;
     padding: var(--standard-padding-size);
-    justify-content: center;
+    justify-content: space-evenly;
     align-items: center;
   }
   #name-title-container > h1 {
