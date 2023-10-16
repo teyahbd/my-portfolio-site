@@ -3,5 +3,5 @@
   font-family: var(--primary-font) !important;
   padding: var(--small-padding-size);
   word-break: break-all;
-  color: var(--secondary-font-color);
+  color: var(--primary-font-color);
 }

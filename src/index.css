@@ -5,6 +5,9 @@
 @import url("https://fonts.googleapis.com/css2?family=Figtree&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Mooli&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montagu+Slab&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Crimson+Pro&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;800;900&display=swap");
 
 :root {
   font-synthesis: none;
@@ -12,14 +15,14 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   -webkit-text-size-adjust: 100%;
-  --header-font: "Playfair Display", serif;
+  --header-font: "Figtree", sans-serif;
   /* make secondary times if using playfair */
-  --primary-font: font-family: "Mooli", sans-serif;
-  --primary-background-color: rgb(229, 255, 246);
+  --primary-font: "Figtree", sans-serif;
+  --primary-background-color: #fcedda;
   --secondary-background-color: #89abe3;
-  --primary-font-color: rgb(0, 0, 0);
-  --secondary-font-color: black;
-  --tertiary-font-color: rgb(0, 115, 141);
+  --primary-font-color: #ee4e34;
+  --secondary-font-color: rgb(30, 84, 171);
+  --tertiary-font-color: #bcb6ff;
   --small-font-size: 1rem;
   --medium-font-size: 1.25rem;
   --medlar-font-size: 1.75rem;
