@@ -34,6 +34,7 @@ export interface ProjectFields {
   repo_link?: string;
   year?: number;
   stack?: string[];
+  order: number;
 }
 
 export interface Project {
@@ -57,6 +58,9 @@ function App() {
   const [intro, setIntro] = useState("");
   useEffect(() => {
     fetchProjects().then((projects) => {
+      projects.sort(
+        (a: Project, b: Project) => a.fields.order - b.fields.order,
+      );
       const projectInfo: ProjectFields[] = [];
       projects.forEach((project: Project) => {
         projectInfo.push(project.fields);
@@ -66,7 +70,6 @@ function App() {
       // TODO: catch errors
     });
     fetchInfo().then((info) => {
-      console.log(info);
       const infoObj: Info = {
         name: "",
         job_title: "",
