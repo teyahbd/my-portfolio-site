@@ -16,7 +16,23 @@ export interface Info {
   email: string | undefined;
 }
 
+export interface ProjectFields {
+  name?: string;
+  description?: string;
+  hosted_link?: string;
+  repo_link?: string;
+  year?: number;
+  stack?: string[];
+}
+
+export interface Project {
+  id: string;
+  createdTime: string;
+  fields: ProjectFields;
+}
+
 function App() {
+  const emptyProjects: ProjectFields[] = [];
   const [personalInfo, setPersonalInfo] = useState({
     name: undefined,
     job_title: undefined,
@@ -26,32 +42,16 @@ function App() {
   });
   const [isLoading, setIsLoading] = useState(true);
   // loading
-  const [projects, setProjects] = useState({
-    2023: [],
-    2022: [],
-    2021: [],
-    2020: [],
-    2019: [],
-  });
+  const [projects, setProjects] = useState(emptyProjects);
   const [intro, setIntro] = useState("");
   useEffect(() => {
     fetchProjects().then((projects) => {
-      const projectYears = {
-        2023: [],
-        2022: [],
-        2021: [],
-        2020: [],
-        2019: [],
-      };
-
-      projects.forEach((project) => {
-        const year = project.fields.year;
-        const currentValues = projectYears[year] ?? null;
-        if (currentValues) {
-          projectYears[year] = [...currentValues, project];
-        }
+      const projectInfo: ProjectFields[] = [];
+      projects.forEach((project: Project) => {
+        projectInfo.push(project.fields);
       });
-      setProjects(projectYears);
+
+      setProjects(projectInfo);
       // TODO: catch errors
     });
     fetchInfo().then((info) => {
@@ -69,15 +69,13 @@ function App() {
 
   return (
     <>
-      <div
-        id="background-color"
-        className={`fade-in-quick ${isLoading ? "loading-circle" : null}`}
-      ></div>
+      {/* <OmbreCircle /> */}
+      <div id="page-background"></div>
       {isLoading ? (
         <></>
       ) : (
         <div id="main-page">
-          <HeaderSection info={personalInfo} />
+          <HeaderSection info={personalInfo} intro={intro} />
           <ScrollContainer
             projects={projects}
             intro={intro}
