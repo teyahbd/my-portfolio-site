@@ -40,6 +40,7 @@ function App() {
             projects={projects}
             intro={intro}
             info={personalInfo}
+            stack={stack}
           />
         </div>
       }

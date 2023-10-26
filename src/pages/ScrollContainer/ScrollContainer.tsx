@@ -6,14 +6,19 @@ import IntroParagraph from "../../atoms/IntroParagraph/IntroParagraph";
 import LinkButton from "../../atoms/LinkButton/LinkButton";
 import { ProjectFields } from "../../data/projects";
 import { Info } from "../../data/info";
+import StackFilter from "../../organisms/StackFilter/StackFilter";
+import { useState } from "react";
 
 interface ScrollContainerProps {
   intro: string[];
   projects: ProjectFields[];
   info: Info;
+  stack: string[];
 }
 
 function ScrollContainer(props: ScrollContainerProps) {
+  const [selectedStack, setSelectedStack] = useState([]);
+  const [isAnd, setIsAnd] = useState(true);
   return (
     <div id="scroll-container" className="fade-in-slow">
       <IntroParagraph text={props.intro} forMobile={false} />
@@ -22,33 +27,44 @@ function ScrollContainer(props: ScrollContainerProps) {
         <div id="mini-ombre-circle" className="fade-in-quick"></div>
         <div id="mini-ombre-circle" className="fade-in-quick"></div>
       </div> */}
+      <StackFilter
+        stack={props.stack}
+        selectedStack={selectedStack}
+        setSelectedStack={setSelectedStack}
+        isAnd={isAnd}
+        setIsAnd={setIsAnd}
+      />
       {props.projects.map((project, index) => {
-        return (
-          <>
-            <Project>
-              {index !== 0 ? <p className="separator">✿✿✿</p> : <></>}
-              <div className="project-header">
-                <h4 className="project-name">
-                  {(project.name ?? "").toLowerCase()}
-                </h4>
-                <div className="project-links">
-                  {project.repo_link ? (
-                    <LinkButton name="github" link={project.repo_link} />
-                  ) : (
-                    <></>
-                  )}
+        {
+          return project.stack?.includes(selectedStack) || !selectedStack ? (
+            <>
+              <Project>
+                {index !== 0 ? <p className="separator">✿✿✿</p> : <></>}
+                <div className="project-header">
+                  <h4 className="project-name">
+                    {(project.name ?? "").toLowerCase()}
+                  </h4>
+                  <div className="project-links">
+                    {project.repo_link ? (
+                      <LinkButton name="github" link={project.repo_link} />
+                    ) : (
+                      <></>
+                    )}
 
-                  {project.hosted_link ? (
-                    <LinkButton name="globe" link={project.hosted_link} />
-                  ) : (
-                    <></>
-                  )}
+                    {project.hosted_link ? (
+                      <LinkButton name="globe" link={project.hosted_link} />
+                    ) : (
+                      <></>
+                    )}
+                  </div>
                 </div>
-              </div>
-              <p className="project-desc">{project.description ?? ""}</p>
-            </Project>
-          </>
-        );
+                <p className="project-desc">{project.description ?? ""}</p>
+              </Project>
+            </>
+          ) : (
+            <></>
+          );
+        }
       })}
 
       <ContactFooter
