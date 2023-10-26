@@ -57,35 +57,38 @@ function App() {
   const [projects, setProjects] = useState(emptyProjects);
   const [intro, setIntro] = useState("");
   useEffect(() => {
-    fetchProjects().then((projects) => {
-      projects.sort(
-        (a: Project, b: Project) => a.fields.order - b.fields.order,
-      );
-      const projectInfo: ProjectFields[] = [];
-      projects.forEach((project: Project) => {
-        projectInfo.push(project.fields);
-      });
+    fetchProjects()
+      .then((projects) => {
+        projects.sort(
+          (a: Project, b: Project) => a.fields.order - b.fields.order,
+        );
+        const projectInfo: ProjectFields[] = [];
+        projects.forEach((project: Project) => {
+          projectInfo.push(project.fields);
+        });
 
-      setProjects(projectInfo);
-      // TODO: catch errors
-    });
-    fetchInfo().then((info) => {
-      const infoObj: Info = {
-        name: "",
-        job_title: "",
-        linkedin_profile_url: "",
-        github_profile_url: "",
-        email: "",
-      };
-      info.forEach((item: InfoTableItem) => {
-        infoObj[item.fields.name as keyof Info] = item.fields.value;
+        setProjects(projectInfo);
+        // TODO: catch errors
+      })
+      .then(() => fetchInfo())
+      .then((info) => {
+        const infoObj: Info = {
+          name: "",
+          job_title: "",
+          linkedin_profile_url: "",
+          github_profile_url: "",
+          email: "",
+        };
+        info.forEach((item: InfoTableItem) => {
+          infoObj[item.fields.name as keyof Info] = item.fields.value;
+        });
+        setPersonalInfo(infoObj);
+      })
+      .then(() => fetchDescription(introRecordId))
+      .then((intro) => {
+        setIntro(intro.fields.description);
+        setIsLoading(false);
       });
-      setPersonalInfo(infoObj);
-    });
-    fetchDescription(introRecordId).then((intro) => {
-      setIntro(intro.fields.description);
-      setIsLoading(false);
-    });
   }, []);
 
   return (
