@@ -44,14 +44,22 @@ function App() {
   // loading
   const [projects, setProjects] = useState(emptyProjects);
   const [intro, setIntro] = useState("");
+  const [stack, setStack] = useState([]);
   useEffect(() => {
     fetchProjects().then((projects) => {
       const projectInfo: ProjectFields[] = [];
+      const projectStack: string[] = [];
       projects.forEach((project: Project) => {
         projectInfo.push(project.fields);
+        if (project.fields.stack) {
+          project.fields.stack.forEach((stack) => {
+            if (!projectStack.includes(stack)) projectStack.push(stack);
+          });
+        }
       });
 
       setProjects(projectInfo);
+      setStack(projectStack);
       // TODO: catch errors
     });
     fetchInfo().then((info) => {
@@ -80,6 +88,7 @@ function App() {
             projects={projects}
             intro={intro}
             info={personalInfo}
+            stack={stack}
           />
         </div>
       )}
