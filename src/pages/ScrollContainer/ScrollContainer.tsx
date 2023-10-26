@@ -18,7 +18,7 @@ interface ScrollContainerProps {
 
 function ScrollContainer(props: ScrollContainerProps) {
   const [selectedStack, setSelectedStack] = useState([]);
-  const [isAnd, setIsAnd] = useState(true);
+  const [isAnd, setIsAnd] = useState(false);
   return (
     <div id="scroll-container" className="fade-in-slow">
       <IntroParagraph text={props.intro} forMobile={false} />
@@ -36,7 +36,11 @@ function ScrollContainer(props: ScrollContainerProps) {
       />
       {props.projects.map((project, index) => {
         {
-          return project.stack?.includes(selectedStack) || !selectedStack ? (
+          const isStackSelected = isAnd
+            ? selectedStack.every((stack) => project.stack?.includes(stack))
+            : selectedStack.some((stack) => project.stack?.includes(stack));
+
+          return isStackSelected || selectedStack.length === 0 ? (
             <>
               <Project>
                 {index !== 0 ? <p className="separator">✿✿✿</p> : <></>}

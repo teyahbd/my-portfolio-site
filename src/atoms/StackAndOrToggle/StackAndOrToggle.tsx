@@ -7,7 +7,6 @@ interface StackAndOrFilterProps {
 
 function StackAndOrFilter({ isAnd, setIsAnd }: StackAndOrFilterProps) {
   function handleChange(event) {
-    console.log(event.target.value);
     setIsAnd(event.target.value === "and" ? true : false);
   }
   return (

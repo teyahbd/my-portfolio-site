@@ -2,7 +2,7 @@ import "./styles.css";
 
 interface StackButton {
   text: string;
-  selectedStack: string;
+  selectedStack: string[];
   setSelectedStack;
 }
 
@@ -22,7 +22,7 @@ function StackButton({ text, selectedStack, setSelectedStack }: StackButton) {
   return (
     <button
       className={`stack-button ${
-        selectedStack === text ? "stack-button-selected" : ""
+        selectedStack.includes(text) ? "stack-button-selected" : ""
       }`}
       onClick={handleClick}
     >
