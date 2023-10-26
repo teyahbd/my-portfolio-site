@@ -7,6 +7,7 @@
   cursor: pointer;
   outline: inherit;
   height: fit-content;
+  width: fit-content;
 }
 
 .stack-button:hover {
@@ -16,4 +17,12 @@
 
 .stack-button-selected {
   color: var(--tertiary-font-color);
+}
+
+.stack-button-disabled {
+  color: grey;
+}
+.stack-button-disabled:hover {
+  cursor: not-allowed;
+  color: grey;
 }

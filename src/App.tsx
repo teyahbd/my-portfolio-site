@@ -19,6 +19,7 @@ function App() {
   });
   const [projects, setProjects] = useState(emptyProjects);
   const [intro, setIntro] = useState([] as string[]);
+  const [stack, setStack] = useState([] as string[]);
   useEffect(() => {
     const info = getInfo();
     const intro = getIntro();
