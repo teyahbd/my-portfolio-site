@@ -20,7 +20,7 @@ function ContactFooter(props: ContactFooterProps) {
       name: "linkedin",
       link:
         props.info.linkedin_profile_url ??
-        "https://www.linkedin.com/in/teyah-brennen-davies/",
+        "https://www.linkedin.com/in/teyahbd",
     },
   ];
   return (

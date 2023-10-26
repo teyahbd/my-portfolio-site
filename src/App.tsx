@@ -8,6 +8,17 @@ const introRecordId = import.meta.env.VITE_INTRO_RECORD_ID;
 
 // TODO: add timeout or error page
 
+interface Fields {
+  name: string;
+  value: string;
+}
+
+interface InfoTableItem {
+  createdTime: string;
+  id: string;
+  fields: Fields;
+}
+
 export interface Info {
   name: string | undefined;
   job_title: string | undefined;
@@ -23,6 +34,7 @@ export interface ProjectFields {
   repo_link?: string;
   year?: number;
   stack?: string[];
+  order: number;
 }
 
 export interface Project {
@@ -33,7 +45,7 @@ export interface Project {
 
 function App() {
   const emptyProjects: ProjectFields[] = [];
-  const [personalInfo, setPersonalInfo] = useState({
+  const [personalInfo, setPersonalInfo] = useState<Info>({
     name: undefined,
     job_title: undefined,
     linkedin_profile_url: undefined,
@@ -46,33 +58,45 @@ function App() {
   const [intro, setIntro] = useState("");
   const [stack, setStack] = useState([]);
   useEffect(() => {
-    fetchProjects().then((projects) => {
-      const projectInfo: ProjectFields[] = [];
-      const projectStack: string[] = [];
-      projects.forEach((project: Project) => {
-        projectInfo.push(project.fields);
-        if (project.fields.stack) {
-          project.fields.stack.forEach((stack) => {
-            if (!projectStack.includes(stack)) projectStack.push(stack);
-          });
-        }
-      });
+    fetchProjects()
+      .then((projects) => {
+        projects.sort(
+          (a: Project, b: Project) => a.fields.order - b.fields.order,
+        );
+        const projectInfo: ProjectFields[] = [];
+        const projectStack: string[] = [];
+        projects.forEach((project: Project) => {
+          projectInfo.push(project.fields);
+          if (project.fields.stack) {
+            project.fields.stack.forEach((stack) => {
+              if (!projectStack.includes(stack)) projectStack.push(stack);
+            });
+          }
+        });
 
-      setProjects(projectInfo);
-      setStack(projectStack);
-      // TODO: catch errors
-    });
-    fetchInfo().then((info) => {
-      const infoObj: Info = {};
-      info.forEach((item) => {
-        infoObj[item.fields.name] = item.fields.value;
+        setProjects(projectInfo);
+        setStack(projectStack);
+        // TODO: catch errors
+      })
+      .then(() => fetchInfo())
+      .then((info) => {
+        const infoObj: Info = {
+          name: "",
+          job_title: "",
+          linkedin_profile_url: "",
+          github_profile_url: "",
+          email: "",
+        };
+        info.forEach((item: InfoTableItem) => {
+          infoObj[item.fields.name as keyof Info] = item.fields.value;
+        });
+        setPersonalInfo(infoObj);
+      })
+      .then(() => fetchDescription(introRecordId))
+      .then((intro) => {
+        setIntro(intro.fields.description);
+        setIsLoading(false);
       });
-      setPersonalInfo(infoObj);
-    });
-    fetchDescription(introRecordId).then((intro) => {
-      setIntro(intro.fields.description);
-      setIsLoading(false);
-    });
   }, []);
 
   return (
