@@ -2,12 +2,18 @@ import "./styles.css";
 
 interface StackAndOrFilterProps {
   isAnd: boolean;
-  setIsAnd;
+  setIsAnd: React.Dispatch<React.SetStateAction<boolean>>;
+  setSelectedStack: React.Dispatch<React.SetStateAction<string[]>>;
 }
 
-function StackAndOrFilter({ isAnd, setIsAnd }: StackAndOrFilterProps) {
-  function handleChange(event) {
-    setIsAnd(event.target.value === "and" ? true : false);
+function StackAndOrFilter({
+  isAnd,
+  setIsAnd,
+  setSelectedStack,
+}: StackAndOrFilterProps) {
+  function handleChange(event: React.ChangeEvent) {
+    setIsAnd((event.target as HTMLInputElement).value === "and" ? true : false);
+    setSelectedStack([]);
   }
   return (
     <>
@@ -18,7 +24,7 @@ function StackAndOrFilter({ isAnd, setIsAnd }: StackAndOrFilterProps) {
         onChange={handleChange}
         checked={isAnd}
       />
-      <label for="and">AND</label>
+      <label htmlFor="and">AND</label>
       <input
         type="radio"
         id="or"
@@ -26,7 +32,7 @@ function StackAndOrFilter({ isAnd, setIsAnd }: StackAndOrFilterProps) {
         onChange={handleChange}
         checked={!isAnd}
       />
-      <label for="or">OR</label>
+      <label htmlFor="or">OR</label>
     </>
   );
 }

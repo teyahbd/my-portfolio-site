@@ -56,7 +56,7 @@ function App() {
   // loading
   const [projects, setProjects] = useState(emptyProjects);
   const [intro, setIntro] = useState("");
-  const [stack, setStack] = useState([]);
+  const [stack, setStack] = useState([] as string[]);
   useEffect(() => {
     fetchProjects()
       .then((projects) => {

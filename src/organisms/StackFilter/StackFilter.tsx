@@ -5,9 +5,10 @@ import "./styles.css";
 interface StackFilterProps {
   stack: string[];
   selectedStack: string[];
-  setSelectedStack;
+  setSelectedStack: React.Dispatch<React.SetStateAction<string[]>>;
   isAnd: boolean;
-  setIsAnd;
+  setIsAnd: React.Dispatch<React.SetStateAction<boolean>>;
+  displayedProjectsStacks: string[];
 }
 
 function StackFilter({
@@ -16,17 +17,24 @@ function StackFilter({
   setSelectedStack,
   isAnd,
   setIsAnd,
+  displayedProjectsStacks,
 }: StackFilterProps) {
   return (
     <div id="stack-filter">
-      {selectedStack.length > 0 ? (
-        <div id="stack-filter-options">
+      <div id="stack-filter-options">
+        {/* {selectedStack.length > 0 ? ( */}
+        <>
           <h3>Filter</h3>
-          <StackAndOrToggle isAnd={isAnd} setIsAnd={setIsAnd} />
-        </div>
-      ) : (
-        <></>
-      )}
+          <StackAndOrToggle
+            isAnd={isAnd}
+            setIsAnd={setIsAnd}
+            setSelectedStack={setSelectedStack}
+          />
+        </>
+        {/* ) : (
+          <></>
+        )} */}
+      </div>
       <div id="stack-button-container">
         {stack.map((item) => {
           return (
@@ -34,6 +42,8 @@ function StackFilter({
               text={item}
               selectedStack={selectedStack}
               setSelectedStack={setSelectedStack}
+              displayedProjectsStacks={displayedProjectsStacks}
+              isAnd={isAnd}
             />
           );
         })}
