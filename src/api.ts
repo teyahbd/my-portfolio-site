@@ -3,7 +3,7 @@ import axios from "axios";
 const airtable = axios.create({
   baseURL: "https://api.airtable.com/v0",
   headers: { Authorization: `Bearer ${import.meta.env.VITE_AIRTABLE_PAT}` },
-  timeout: 1000,
+  timeout: 5000,
 });
 
 const airtableBaseId = import.meta.env.VITE_AIRTABLE_BASE_ID;
