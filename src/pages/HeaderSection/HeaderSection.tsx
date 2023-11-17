@@ -1,5 +1,5 @@
-import { Info } from "../../App";
 import IntroParagraph from "../../atoms/IntroParagraph/IntroParagraph";
+import { Info } from "../../data/info";
 import ContactFooter from "../../organisms/ContactFooter/ContactFooter";
 import "./styles.css";
 

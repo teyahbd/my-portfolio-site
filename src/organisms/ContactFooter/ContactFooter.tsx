@@ -1,6 +1,6 @@
-import { Info } from "../../App";
 import Email from "../../atoms/Email/Email";
 import { LinkButtonProps } from "../../atoms/LinkButton/LinkButton";
+import { Info } from "../../data/info";
 import LinkButtonContainer from "../../molecules/LinkButtonContainer.tsx/LinkButtonContainer";
 import "./styles.css";
 

@@ -2,9 +2,10 @@ import CreditFooter from "../../atoms/CreditFooter/CreditFooter";
 import ContactFooter from "../../organisms/ContactFooter/ContactFooter";
 import Project from "../../organisms/Project/Project";
 import "./styles.css";
-import { Info, ProjectFields } from "../../App";
 import IntroParagraph from "../../atoms/IntroParagraph/IntroParagraph";
 import LinkButton from "../../atoms/LinkButton/LinkButton";
+import { ProjectFields } from "../../data/projects";
+import { Info } from "../../data/info";
 
 interface ScrollContainerProps {
   intro: string;
