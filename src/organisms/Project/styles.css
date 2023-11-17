@@ -31,7 +31,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  font-size: var(--medium-font-size);
+  font-size: var(--medlar-font-size);
   color: var(--tertiary-font-color);
   font-family: var(--header-font);
 }
