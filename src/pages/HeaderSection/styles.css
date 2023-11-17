@@ -1,6 +1,6 @@
 header {
   height: 100vh;
-  width: 40vw;
+  width: 45vw;
   position: sticky;
   top: 0;
   padding: calc(4 * var(--standard-padding-size));
@@ -14,7 +14,6 @@ header {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding-top: calc(3 * var(--standard-padding-size));
 }
 
 #name-title-container > h1 {
@@ -46,6 +45,7 @@ header {
   #name-title-container > h1 {
     text-align: center;
     font-size: var(--large-font-size);
+    padding-top: var(--small-padding-size);
   }
   #name-title-container > h2 {
     font-size: var(--medlar-font-size);
