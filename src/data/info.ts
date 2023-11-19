@@ -8,7 +8,7 @@ export interface Info {
 
 export const getInfo = (): Info => {
   const info = {
-    name: "Teyah BD",
+    name: "Teyah Brennen-Davies",
     job_title: "Software Engineer",
     email: "heya@teyah.dev",
     github_profile_url: "https://github.com/teyahbd",

@@ -6,6 +6,7 @@ footer {
 
 #credit-footer {
   padding: calc(3 * var(--small-padding-size));
+  padding-top: calc(8 * var(--small-padding-size));
   color: var(--primary-font-color);
   font-size: var(--small-font-size);
 }

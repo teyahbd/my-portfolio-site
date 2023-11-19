@@ -66,11 +66,11 @@ function ScrollContainer(props: ScrollContainerProps) {
         setIsAnd={setIsAnd}
         displayedProjectsStacks={displayedProjectsStacks}
       />
-      {displayedProjects.map((project, index) => {
+      {displayedProjects.map((project) => {
         return (
           <>
             <Project>
-              {index !== 0 ? <p className="separator">✿✿✿</p> : <></>}
+              {/* {index !== 0 ? <p className="separator">✿✿✿</p> : <></>} */}
               <div className="project-header">
                 <h4 className="project-name">
                   {(project.name ?? "").toLowerCase()}

@@ -1,10 +1,10 @@
 export interface ProjectFields {
-  name?: string;
-  description?: string;
-  hosted_link?: string;
-  repo_link?: string;
+  name: string;
+  description: string;
+  hosted_link: string;
+  repo_link: string;
   year?: number;
-  stack?: string[];
+  stack: string[];
   order: number;
 }
 

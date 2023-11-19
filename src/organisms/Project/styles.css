@@ -5,8 +5,16 @@
   align-items: left;
   padding-top: 0;
   padding-bottom: 0;
+  border: 1px solid black;
+  margin-top: 3rem;
+  padding: 1.5rem;
+  border-radius: 40px;
+  background-color: rgb(249, 213, 249);
 }
 
+.project:hover {
+  background-color: rgb(245, 231, 245);
+}
 .project-name {
   padding: var(--small-padding-size);
   font-size: 1.4rem;
@@ -31,7 +39,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  font-size: var(--medium-font-size);
+  font-size: 1.5rem;
   color: var(--tertiary-font-color);
   font-family: var(--header-font);
 }

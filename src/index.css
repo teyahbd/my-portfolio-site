@@ -18,9 +18,9 @@
   --header-font: "Figtree", sans-serif;
   /* make secondary times if using playfair */
   --primary-font: "Figtree", sans-serif;
-  --primary-background-color: #fcedda;
+  --primary-background-color: #fbf7f2;
   --secondary-background-color: #89abe3;
-  --primary-font-color: #ee4e34;
+  --primary-font-color: #1e1c1c;
   --secondary-font-color: rgb(30, 84, 171);
   --tertiary-font-color: #bcb6ff;
   --small-font-size: 1rem;

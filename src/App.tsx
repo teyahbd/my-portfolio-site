@@ -20,15 +20,19 @@ function App() {
   const [projects, setProjects] = useState(emptyProjects);
   const [intro, setIntro] = useState("");
   const [stack, setStack] = useState([] as string[]);
-  console.log(setStack);
   useEffect(() => {
     const info = getInfo();
     const intro = getIntro();
     const projects = getProjects();
 
+    const projectsStack: string[] = [];
+
+    projects.forEach((project) => projectsStack.concat(project.stack));
+
     setPersonalInfo(info);
     setIntro(intro);
     setProjects(projects);
+    setStack(projectsStack);
   }, []);
 
   return (
