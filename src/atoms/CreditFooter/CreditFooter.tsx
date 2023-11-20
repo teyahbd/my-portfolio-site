@@ -2,9 +2,10 @@ import "./styles.css";
 
 function CreditFooter(props: { name: string }) {
   return (
-    <footer>
-      <p id="credit-footer">© 2023 {props.name}</p>
-      {/* <p id="footer-icon">✨</p> */}
+    <footer id="credit-footer">
+      <p className="credit-footer-text">© 2023</p>
+      <img className="favicon" src="./src/assets/img/girl.png" />
+      <p className="credit-footer-text">{props.name}</p>
     </footer>
   );
 }
