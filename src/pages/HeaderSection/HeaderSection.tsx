@@ -12,8 +12,15 @@ function HeaderSection(props: HeaderSection) {
   return (
     <header className="fade-in-quick">
       <div id="name-title-container">
-        <h1>{props.info.name ?? "Teyah"}</h1>
-        <h2>{(props.info.job_title ?? "software engineer").toLowerCase()}</h2>
+        <h1 className="name">{props.info.name ?? "Teyah"}</h1>
+        <span id="title-container" className="web-only">
+          <img className="dev" src="./src/assets/img/girl.png" />
+          {(props.info.job_title ?? "software engineer").toLowerCase()}
+        </span>
+        <img className="dev mobile-only" src="./src/assets/img/girl.png" />
+        <span className="title mobile-only">
+          {(props.info.job_title ?? "software engineer").toLowerCase()}
+        </span>
       </div>
       <ContactFooter
         email={props.info.email ?? ""}

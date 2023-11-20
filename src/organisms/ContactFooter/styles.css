@@ -7,10 +7,10 @@
 }
 
 .mobile-only {
-  display: none;
+  display: none !important;
 }
 .web-only {
-  display: flex;
+  display: flex !important;
 }
 
 @media only screen and (max-width: 1024px) {
@@ -18,9 +18,9 @@
     flex-direction: column;
   }
   .mobile-only {
-    display: flex;
+    display: flex !important;
   }
   .web-only {
-    display: none;
+    display: none !important;
   }
 }

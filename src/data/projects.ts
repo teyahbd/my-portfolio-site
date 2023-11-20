@@ -26,7 +26,7 @@ export const getProjects = (): ProjectFields[] => {
         "This site was built with React and TypeScript to showcase my ever-growing list of projects!",
       stack: ["TypeScript", "React", "JavaScript"],
       repo_link: "https://github.com/teyahbd/my-portfolio-site",
-      hosted_link: "https://teyah.dev",
+      hosted_link: "https://heyateyah.com",
       year: 2023,
       order: 2,
     },

@@ -3,36 +3,41 @@ header {
   width: 45vw;
   position: sticky;
   top: 0;
-  padding: calc(4 * var(--standard-padding-size));
+  padding: calc(3 * var(--standard-padding-size));
+  padding-right: calc(2 * var(--standard-padding-size));
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  align-items: start;
+  align-items: left;
 }
 
-#name-title-container {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  flex-grow: 1;
-}
-
-#name-title-container > h1 {
+.name {
   font-family: var(--header-font);
   font-size: var(--xxlarge-font-size);
-  text-align: left;
   padding: var(--standard-padding-size);
   padding-bottom: 0;
   padding-top: 0;
   width: 100%;
 }
 
-#name-title-container > h2 {
+.dev {
+  height: var(--large-font-size);
+  padding-right: 1rem;
+}
+
+#name-title-container {
+  display: flex;
+  flex-direction: column;
+}
+
+#title-container {
   padding: var(--standard-padding-size);
-  padding-top: var(--small-padding-size);
+  padding-top: calc(2 * var(--standard-padding-size));
   font-size: var(--large-font-size);
-  width: 100%;
-  text-align: left;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  justify-content: left;
 }
 
 @media only screen and (max-width: 1024px) {
@@ -40,16 +45,30 @@ header {
     position: static;
     width: 100%;
     padding: var(--standard-padding-size);
-    justify-content: space-evenly;
+    justify-content: space-between;
+    align-items: center;
+  }
+  #name-title-container {
     align-items: center;
   }
   #name-title-container > h1 {
     text-align: center;
     font-size: var(--large-font-size);
-    padding-top: var(--small-padding-size);
+    padding: var(--small-padding-size);
+    padding-top: calc(2 * var(--small-padding-size));
   }
-  #name-title-container > h2 {
+  #name-title-container > span {
     font-size: var(--medlar-font-size);
     text-align: center;
+    font-weight: 500;
+  }
+  .dev {
+    margin: var(--small-padding-size);
+    padding: 0;
+    width: var(--large-font-size);
+  }
+  .title {
+    font-size: var(--medlar-font-size) !important;
+    padding: var(--small-padding-size);
   }
 }

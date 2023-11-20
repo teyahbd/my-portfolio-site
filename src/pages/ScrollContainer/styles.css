@@ -1,6 +1,7 @@
 #scroll-container {
   width: 55vw;
-  padding: calc(4 * var(--standard-padding-size));
+  padding: calc(3 * var(--standard-padding-size));
+  padding-left: calc(2 * var(--standard-padding-size));
   /* background: linear-gradient(
     45deg,
     #c7f5fe 10%,
