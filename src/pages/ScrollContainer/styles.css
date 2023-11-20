@@ -15,11 +15,6 @@
   ); */
 }
 
-h2 {
-  font-family: var(--header-font);
-  font-size: var(--large-font-size);
-}
-
 .project-box {
   padding: var(--standard-padding-size);
   height: 20vh;
@@ -72,6 +67,11 @@ p {
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+.stack-filter-header {
+  padding: 0;
+  text-align: left;
 }
 
 @media only screen and (max-width: 1024px) {

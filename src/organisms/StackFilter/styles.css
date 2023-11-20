@@ -20,3 +20,9 @@
   height: 2rem;
   align-items: center;
 }
+
+.stack-filter-header {
+  padding: 0;
+  text-align: left;
+  font-size: var(--large-font-size);
+}

@@ -58,6 +58,7 @@ function ScrollContainer(props: ScrollContainerProps) {
         <div id="mini-ombre-circle" className="fade-in-quick"></div>
         <div id="mini-ombre-circle" className="fade-in-quick"></div>
       </div> */}
+      <h2 className="stack-filter-header">What would you like to see?</h2>
       <StackFilter
         stack={props.stack}
         selectedStack={selectedStack}

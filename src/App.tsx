@@ -25,9 +25,20 @@ function App() {
     const intro = getIntro();
     const projects = getProjects();
 
+    const stackList: string[] = [];
+
+    projects.forEach((project) => {
+      if (project.stack) {
+        project.stack.forEach((stack) => {
+          if (!stackList.includes(stack)) stackList.push(stack);
+        });
+      }
+    });
+
     setPersonalInfo(info);
     setIntro(intro);
     setProjects(projects);
+    setStack(stackList);
   }, []);
 
   return (
