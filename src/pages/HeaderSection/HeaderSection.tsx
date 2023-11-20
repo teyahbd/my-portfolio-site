@@ -17,7 +17,7 @@ function HeaderSection(props: HeaderSection) {
           <img className="dev" src="./src/assets/img/girl.png" />
           {(props.info.job_title ?? "software engineer").toLowerCase()}
         </span>
-        <img className="dev mobile-only" alt="" src="src/assets/img/girl.png" />
+        <img className="dev mobile-only" src="/assets/girl-d56b0942.png" />
         <span className="title mobile-only">
           {(props.info.job_title ?? "software engineer").toLowerCase()}
         </span>
