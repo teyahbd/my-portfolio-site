@@ -10,7 +10,7 @@ export const getInfo = (): Info => {
   const info = {
     name: "Teyah Brennen-Davies",
     job_title: "Software Engineer",
-    email: "heya@teyah.dev",
+    email: "info@heyateyah.com",
     github_profile_url: "https://github.com/teyahbd",
     linkedin_profile_url: "https://www.linkedin.com/in/teyahbd",
   };

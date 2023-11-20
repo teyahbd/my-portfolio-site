@@ -1,7 +1,11 @@
 import "./styles.css";
 
 function Email(props: { emailAddress: string }) {
-  return <p id="email">{props.emailAddress}</p>;
+  return (
+    <a id="email" href={`mailto:${props.emailAddress}`}>
+      {props.emailAddress}
+    </a>
+  );
 }
 
 export default Email;
