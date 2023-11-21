@@ -40,6 +40,16 @@ header {
   justify-content: left;
 }
 
+.mobile-only-img {
+  display: none !important;
+}
+
+@media only screen and (max-width: 1024px) {
+  .mobile-only-img {
+    display: flex;
+  }
+}
+
 @media only screen and (max-width: 1024px) {
   header {
     position: static;

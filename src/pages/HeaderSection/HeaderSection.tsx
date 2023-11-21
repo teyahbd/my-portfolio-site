@@ -14,10 +14,22 @@ function HeaderSection(props: HeaderSection) {
       <div id="name-title-container">
         <h1 className="name">{props.info.name ?? "Teyah"}</h1>
         <span id="title-container" className="web-only">
-          <img className="dev" src="./src/assets/img/girl.png" />
+          <img
+            className="dev"
+            src="/assets/girl-d56b0942.png"
+            onError={(e) => {
+              (e.target as HTMLImageElement).style.display = "none";
+            }}
+          />
           {(props.info.job_title ?? "software engineer").toLowerCase()}
         </span>
-        <img className="dev mobile-only" src="/assets/girl-d56b0942.png" />
+        <img
+          className="dev mobile-only-img"
+          src="/assets/girl-d56b0942.png"
+          onError={(e) => {
+            (e.target as HTMLImageElement).style.display = "none";
+          }}
+        />
         <span className="title mobile-only">
           {(props.info.job_title ?? "software engineer").toLowerCase()}
         </span>
