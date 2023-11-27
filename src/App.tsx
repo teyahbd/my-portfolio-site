@@ -18,7 +18,7 @@ function App() {
     email: undefined,
   });
   const [projects, setProjects] = useState(emptyProjects);
-  const [intro, setIntro] = useState("");
+  const [intro, setIntro] = useState([] as string[]);
   useEffect(() => {
     const info = getInfo();
     const intro = getIntro();

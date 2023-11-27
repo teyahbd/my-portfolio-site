@@ -5,7 +5,7 @@ import "./styles.css";
 
 interface HeaderSection {
   info: Info;
-  intro: string;
+  intro: string[];
 }
 
 function HeaderSection(props: HeaderSection) {

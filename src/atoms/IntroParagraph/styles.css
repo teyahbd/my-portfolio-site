@@ -1,27 +1,25 @@
-#intro-paragraph {
+#intro {
   font-size: var(--medium-font-size);
   line-height: var(--standard-line-height);
   padding: var(--standard-padding-size);
   text-align: center;
   padding-bottom: calc(5 * var(--standard-padding-size));
   flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 @media only screen and (max-width: 1024px) {
-  #intro-paragraph {
+  #intro {
     text-align: center;
     padding-top: calc(1 * var(--standard-padding-size));
     padding-bottom: calc(1 * var(--standard-padding-size));
     align-items: center;
-  }
-  #intro-container {
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
     justify-content: center;
   }
-  .paragraph {
-    text-align: center;
-    align-items: center;
+  .intro-paragraph {
+    font-size: var(--small-font-size);
+    padding: var(--small-padding-size);
   }
 }

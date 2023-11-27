@@ -1,18 +1,28 @@
 import "./styles.css";
 
 export interface IntroParagraphProps {
-  text: string;
+  text: string[];
   forMobile: boolean;
 }
 
 function IntroParagraph(props: IntroParagraphProps) {
   return (
-    <p
-      id="intro-paragraph"
-      className={`${props.forMobile ? "mobile-only fade-in-slow" : "web-only"}`}
+    <section
+      id="intro"
+      className={`${props.forMobile ? "mobile-only" : "web-only"}`}
     >
-      {props.text}
-    </p>
+      {props.text.map((paragraph) => {
+        return (
+          <p
+            className={`intro-paragraph ${
+              props.forMobile ? "mobile-only fade-in-slow" : "web-only"
+            }`}
+          >
+            {paragraph}
+          </p>
+        );
+      })}
+    </section>
   );
 }
 

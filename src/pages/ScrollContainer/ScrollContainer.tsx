@@ -8,7 +8,7 @@ import { ProjectFields } from "../../data/projects";
 import { Info } from "../../data/info";
 
 interface ScrollContainerProps {
-  intro: string;
+  intro: string[];
   projects: ProjectFields[];
   info: Info;
 }
