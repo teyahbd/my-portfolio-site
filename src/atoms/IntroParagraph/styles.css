@@ -3,11 +3,16 @@
   line-height: var(--standard-line-height);
   padding: var(--standard-padding-size);
   text-align: center;
+  padding-top: calc(3 * var(--standard-padding-size));
   padding-bottom: calc(5 * var(--standard-padding-size));
   flex-grow: 1;
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+
+.intro-paragraph {
+  padding: var(--small-padding-size);
 }
 
 @media only screen and (max-width: 1024px) {
@@ -20,6 +25,5 @@
   }
   .intro-paragraph {
     font-size: var(--small-font-size);
-    padding: var(--small-padding-size);
   }
 }
