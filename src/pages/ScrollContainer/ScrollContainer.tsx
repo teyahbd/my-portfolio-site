@@ -1,13 +1,13 @@
 import CreditFooter from "../../atoms/CreditFooter/CreditFooter";
 import ContactFooter from "../../organisms/ContactFooter/ContactFooter";
-import Project from "../../organisms/Project/Project";
 import "./styles.css";
 import IntroParagraph from "../../atoms/IntroParagraph/IntroParagraph";
-import LinkButton from "../../atoms/LinkButton/LinkButton";
 import { ProjectFields } from "../../data/projects";
 import { Info } from "../../data/info";
 import StackFilter from "../../organisms/StackFilter/StackFilter";
 import { useEffect, useState } from "react";
+import Project from "../../organisms/Project/Project";
+import LinkButton from "../../atoms/LinkButton/LinkButton";
 
 interface ScrollContainerProps {
   intro: string[];
@@ -17,11 +17,7 @@ interface ScrollContainerProps {
 }
 
 function ScrollContainer(props: ScrollContainerProps) {
-  const [selectedStack, setSelectedStack] = useState([] as string[]);
-  const [isAnd, setIsAnd] = useState(false);
-  const [displayedProjectsStacks, setDisplayedProjectsStacks] = useState(
-    [] as string[],
-  );
+  const [selectedStack, setSelectedStack] = useState<string | null>(null);
   const [displayedProjects, setDisplayedProjects] = useState(
     [] as ProjectFields[],
   );
@@ -30,25 +26,23 @@ function ScrollContainer(props: ScrollContainerProps) {
     const currentStacks: string[] = [];
     const currentProjects: ProjectFields[] = [];
     props.projects.forEach((project) => {
-      const isStackSelected = isAnd
-        ? selectedStack.every((stack) => project.stack?.includes(stack))
-        : selectedStack.some((stack) => project.stack?.includes(stack));
+      const isStackSelected = selectedStack
+        ? project.stack?.includes(selectedStack)
+        : false;
 
-      const displayProject = isStackSelected || selectedStack.length === 0;
+      const displayProject = isStackSelected || !selectedStack;
 
       if (displayProject) {
         currentProjects.push(project);
-        if (isAnd && selectedStack.length !== 0) {
+        if (!selectedStack) {
           project.stack?.forEach((stack) => {
             currentStacks.push(stack);
           });
         }
       }
     });
-
-    setDisplayedProjectsStacks(currentStacks);
     setDisplayedProjects(currentProjects);
-  }, [selectedStack, isAnd, props.projects]);
+  }, [selectedStack, props.projects]);
 
   return (
     <div id="scroll-container" className="fade-in-slow">
@@ -63,14 +57,12 @@ function ScrollContainer(props: ScrollContainerProps) {
         stack={props.stack}
         selectedStack={selectedStack}
         setSelectedStack={setSelectedStack}
-        isAnd={isAnd}
-        setIsAnd={setIsAnd}
-        displayedProjectsStacks={displayedProjectsStacks}
+        setDisplayedProjects={setDisplayedProjects}
       />
       {displayedProjects.map((project, index) => {
         return (
           <>
-            <Project>
+            <Project index={index}>
               {index !== 0 ? <p className="separator">✿✿✿</p> : <></>}
               <div className="project-header">
                 <h4 className="project-name">

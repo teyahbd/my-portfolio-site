@@ -8,21 +8,15 @@
   outline: inherit;
   height: fit-content;
   width: fit-content;
+  font-size: var(--medium-font-size);
+  transition-duration: 0.3s;
 }
 
 .stack-button:hover {
   cursor: pointer;
-  color: var(--tertiary-font-color);
+  color: #e98171;
 }
 
 .stack-button-selected {
-  color: var(--tertiary-font-color);
-}
-
-.stack-button-disabled {
-  color: grey;
-}
-.stack-button-disabled:hover {
-  cursor: not-allowed;
-  color: grey;
+  color: var(--tertiary-font-color) !important;
 }

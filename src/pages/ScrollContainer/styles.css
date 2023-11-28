@@ -70,8 +70,9 @@ p {
 }
 
 .stack-filter-header {
-  padding: 0;
-  text-align: left;
+  padding: var(--standard-padding-size) !important;
+  text-align: center !important;
+  font-size: var(--medlar-font-size) !important;
 }
 
 @media only screen and (max-width: 1024px) {

@@ -1,49 +1,31 @@
-import StackAndOrToggle from "../../atoms/StackAndOrToggle/StackAndOrToggle";
 import StackButton from "../../atoms/StackButton/StackButton";
+import { ProjectFields } from "../../data/projects";
 import "./styles.css";
 
 interface StackFilterProps {
   stack: string[];
-  selectedStack: string[];
-  setSelectedStack: React.Dispatch<React.SetStateAction<string[]>>;
-  isAnd: boolean;
-  setIsAnd: React.Dispatch<React.SetStateAction<boolean>>;
-  displayedProjectsStacks: string[];
+  selectedStack: string | null;
+  setSelectedStack: React.Dispatch<React.SetStateAction<string | null>>;
+  setDisplayedProjects: React.Dispatch<React.SetStateAction<ProjectFields[]>>;
 }
 
 function StackFilter({
   stack,
   selectedStack,
   setSelectedStack,
-  isAnd,
-  setIsAnd,
-  displayedProjectsStacks,
+  setDisplayedProjects,
 }: StackFilterProps) {
   return (
     <div id="stack-filter">
-      <div id="stack-filter-options">
-        {/* {selectedStack.length > 0 ? ( */}
-        <>
-          <h3>Filter</h3>
-          <StackAndOrToggle
-            isAnd={isAnd}
-            setIsAnd={setIsAnd}
-            setSelectedStack={setSelectedStack}
-          />
-        </>
-        {/* ) : (
-          <></>
-        )} */}
-      </div>
       <div id="stack-button-container">
-        {stack.map((item) => {
+        {stack.map((item, index) => {
           return (
             <StackButton
               text={item}
               selectedStack={selectedStack}
               setSelectedStack={setSelectedStack}
-              displayedProjectsStacks={displayedProjectsStacks}
-              isAnd={isAnd}
+              setDisplayedProjects={setDisplayedProjects}
+              key={index}
             />
           );
         })}

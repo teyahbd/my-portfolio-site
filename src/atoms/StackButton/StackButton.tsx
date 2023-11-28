@@ -1,44 +1,33 @@
+import { ProjectFields } from "../../data/projects";
 import "./styles.css";
 
 interface StackButton {
   text: string;
-  selectedStack: string[];
-  setSelectedStack: React.Dispatch<React.SetStateAction<string[]>>;
-  displayedProjectsStacks: string[];
-  isAnd: boolean;
+  selectedStack: string | null;
+  setSelectedStack: React.Dispatch<React.SetStateAction<string | null>>;
+  setDisplayedProjects: React.Dispatch<React.SetStateAction<ProjectFields[]>>;
 }
 
 function StackButton({
   text,
   selectedStack,
   setSelectedStack,
-  displayedProjectsStacks,
-  isAnd,
+  setDisplayedProjects,
 }: StackButton) {
-  const isSelected = selectedStack.includes(text);
-  const isDisabled =
-    !displayedProjectsStacks.includes(text) &&
-    !isSelected &&
-    selectedStack.length !== 0 &&
-    isAnd;
+  const isSelected = selectedStack === text;
   function handleClick(event: React.MouseEvent) {
     event?.preventDefault();
-    const newValue = (event.target as HTMLElement).textContent;
-    let newStackArray = [...selectedStack];
+    setDisplayedProjects([]);
 
-    if (newValue && selectedStack.includes(newValue)) {
-      newStackArray = newStackArray.filter((stack) => stack !== newValue);
-    } else if (newValue) {
-      newStackArray.push(newValue);
-    }
-    setSelectedStack(newStackArray);
+    const newValue = (event.target as HTMLElement).textContent;
+
+    const selected = newValue === selectedStack ? null : newValue;
+
+    setSelectedStack(selected);
   }
   return (
     <button
-      className={`stack-button ${isSelected ? "stack-button-selected" : ""} ${
-        isDisabled ? "stack-button-disabled" : ""
-      }`}
-      disabled={isDisabled}
+      className={`stack-button ${isSelected ? "stack-button-selected" : ""}`}
       onClick={handleClick}
     >
       {text}
