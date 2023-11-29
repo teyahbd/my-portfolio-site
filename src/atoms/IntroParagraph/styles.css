@@ -3,6 +3,7 @@
   line-height: var(--standard-line-height);
   padding: var(--standard-padding-size);
   text-align: center;
+  padding-top: 0;
   padding-bottom: calc(5 * var(--standard-padding-size));
   flex-grow: 1;
   display: flex;
