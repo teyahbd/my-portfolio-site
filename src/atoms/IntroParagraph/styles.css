@@ -2,9 +2,8 @@
   font-size: var(--medium-font-size);
   line-height: var(--standard-line-height);
   padding: var(--standard-padding-size);
-  text-align: center;
+  text-align: left;
   padding-top: 0;
-  padding-bottom: calc(5 * var(--standard-padding-size));
   flex-grow: 1;
   display: flex;
   flex-direction: column;
@@ -13,6 +12,9 @@
 
 .intro-paragraph {
   padding: var(--small-padding-size);
+  padding-left: 0;
+  padding-right: 0;
+  width: 100%;
 }
 
 .top-paragraph {

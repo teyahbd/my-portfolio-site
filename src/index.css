@@ -19,15 +19,16 @@
   /* make secondary times if using playfair */
   --primary-font: "Figtree", sans-serif;
   --primary-background-color: #fcedda;
-  --secondary-background-color: #89abe3;
+  --secondary-background-color: yellow;
   --primary-font-color: #ee4e34;
-  --secondary-font-color: rgb(30, 84, 171);
-  --tertiary-font-color: #bcb6ff;
+  --secondary-font-color: #c3402b;
+  /* --secondary-font-color: #b01700; */
+  --tertiary-font-color: #ff8f7d;
   --small-font-size: 1rem;
-  --medium-font-size: 1.25rem;
+  --medium-font-size: 1.2rem;
   --medlar-font-size: 1.75rem;
-  --large-font-size: 3rem;
-  --xlarge-font-size: 4rem;
+  --large-font-size: 2.5rem;
+  --xlarge-font-size: 10rem;
   --xxlarge-font-size: 5.25rem;
   --standard-padding-size: 16px;
   --small-padding-size: 8px;

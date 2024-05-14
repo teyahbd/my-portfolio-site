@@ -7,7 +7,7 @@ a > span {
 }
 
 a > span:hover {
-  color: rgb(255, 191, 0);
+  color: var(--tertiary-font-color);
 }
 
 @media only screen and (max-width: 1024px) {

@@ -17,9 +17,14 @@
   ); */
 }
 
-h2 {
+#projects-header {
   font-family: var(--header-font);
-  font-size: var(--large-font-size);
+  font-size: var(--medlar-font-size);
+  padding: var(--standard-padding-size);
+  padding-top: calc(4 * var(--standard-padding-size));
+  padding-bottom: calc(2 * var(--standard-padding-size));
+  text-align: left;
+  font-weight: 400;
 }
 
 .project-box {
@@ -35,27 +40,10 @@ h2 {
   font-size: var(--large-font-size);
 }
 
-p > span {
-  font-family: var(--primary-font);
-  line-height: var(--standard-line-height);
-  font-size: var(--medium-font-size);
-  font-weight: bold;
-}
-
-p > span:hover {
-  color: rgb(255, 136, 255);
-}
-
 p {
   font-family: var(--primary-font);
   line-height: var(--standard-line-height);
   font-size: var(--medium-font-size);
-}
-
-.separator {
-  text-align: center;
-  color: var(--primary-font-color);
-  padding: var(--standard-padding-size);
 }
 
 #mini-ombre-circle {

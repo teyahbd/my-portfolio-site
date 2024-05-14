@@ -1,0 +1,24 @@
+.project-link {
+  cursor: pointer;
+  padding: var(--small-padding-size);
+  font-size: var(--small-font-size);
+  transition-duration: 0.3s;
+  text-decoration: underline transparent;
+}
+
+.project-link:hover {
+  color: var(--tertiary-font-color);
+  text-decoration-color: var(--tertiary-font-color);
+}
+
+.link-icon {
+  font-size: inherit;
+  color: inherit;
+  padding-right: 0.2rem;
+}
+
+@media only screen and (max-width: 1024px) {
+  .project-link:hover {
+    transform: none;
+  }
+}

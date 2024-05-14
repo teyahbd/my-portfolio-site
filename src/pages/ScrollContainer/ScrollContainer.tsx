@@ -3,7 +3,6 @@ import ContactFooter from "../../organisms/ContactFooter/ContactFooter";
 import Project from "../../organisms/Project/Project";
 import "./styles.css";
 import IntroParagraph from "../../atoms/IntroParagraph/IntroParagraph";
-import LinkButton from "../../atoms/LinkButton/LinkButton";
 import { ProjectFields } from "../../data/projects";
 import { Info } from "../../data/info";
 
@@ -22,35 +21,10 @@ function ScrollContainer(props: ScrollContainerProps) {
         <div id="mini-ombre-circle" className="fade-in-quick"></div>
         <div id="mini-ombre-circle" className="fade-in-quick"></div>
       </div> */}
+      <h2 id="projects-header">Here are some cool things I've built!</h2>
       {props.projects.map((project, index) => {
-        return (
-          <>
-            <Project>
-              {index !== 0 ? <p className="separator">✿✿✿</p> : <></>}
-              <div className="project-header">
-                <h4 className="project-name">
-                  {(project.name ?? "").toLowerCase()}
-                </h4>
-                <div className="project-links">
-                  {project.repo_link ? (
-                    <LinkButton name="github" link={project.repo_link} />
-                  ) : (
-                    <></>
-                  )}
-
-                  {project.hosted_link ? (
-                    <LinkButton name="globe" link={project.hosted_link} />
-                  ) : (
-                    <></>
-                  )}
-                </div>
-              </div>
-              <p className="project-desc">{project.description ?? ""}</p>
-            </Project>
-          </>
-        );
+        return <Project project={project} index={index} />;
       })}
-
       <ContactFooter
         email={props.info.email ?? ""}
         info={props.info}

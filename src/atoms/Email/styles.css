@@ -4,5 +4,15 @@
   padding: var(--small-padding-size);
   word-break: break-all;
   color: var(--primary-font-color);
-  text-decoration: none;
+  transition-duration: 0.3s;
+}
+
+#email:hover {
+  color: var(--tertiary-font-color);
+}
+
+@media only screen and (max-width: 1024px) {
+  #email {
+    transition: none;
+  }
 }

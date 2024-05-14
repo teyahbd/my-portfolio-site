@@ -8,30 +8,39 @@ interface HeaderSection {
   intro: string[];
 }
 
+const MODE = import.meta.env.MODE;
+
 function HeaderSection(props: HeaderSection) {
+  const imagePath =
+    MODE === "development"
+      ? "/src/assets/img/girl.png"
+      : "/assets/girl-d56b0942.png";
+
+  console.log(imagePath);
+
   return (
     <header className="fade-in-quick">
       <div id="name-title-container">
         <h1 className="name">{props.info.name ?? "Teyah"}</h1>
         <span id="title-container" className="web-only">
-          <img
+          {/* <img
             className="dev"
-            src="/assets/girl-d56b0942.png"
+            src={imagePath}
             onError={(e) => {
               (e.target as HTMLImageElement).style.display = "none";
             }}
-          />
-          {(props.info.job_title ?? "software engineer").toLowerCase()}
+          /> */}
+          {props.info.job_title ?? "software engineer"}
         </span>
-        <img
+        {/* <img
           className="dev mobile-only-img"
-          src="/assets/girl-d56b0942.png"
+          src={imagePath}
           onError={(e) => {
             (e.target as HTMLImageElement).style.display = "none";
           }}
-        />
+        /> */}
         <span className="title mobile-only">
-          {(props.info.job_title ?? "software engineer").toLowerCase()}
+          {props.info.job_title ?? "software engineer"}
         </span>
       </div>
       <ContactFooter
