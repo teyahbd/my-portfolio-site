@@ -6,6 +6,7 @@ export interface ProjectFields {
   stack?: string[];
   order: number;
   title: TitleType;
+  imagePaths?: string[];
 }
 
 export interface LinkType {
@@ -37,27 +38,27 @@ export const getProjects = (): ProjectFields[] => {
       year: 2023,
       order: 1,
     },
-    {
-      title: {
-        name: "My gorgeous portfolio site",
-        icon: "fa-solid fa-folder-open",
-      },
-      description:
-        "This site was built with React and TypeScript to showcase my ever-growing list of projects!",
-      stack: ["TypeScript", "React", "JavaScript"],
-      links: [
-        {
-          name: "GitHub",
-          link: "https://github.com/teyahbd/my-portfolio-site",
-        },
-        {
-          name: "Portfolio Site",
-          link: "https://heyateyah.com",
-        },
-      ],
-      year: 2023,
-      order: 2,
-    },
+    // {
+    //   title: {
+    //     name: "My gorgeous portfolio site",
+    //     icon: "fa-solid fa-folder-open",
+    //   },
+    //   description:
+    //     "This site was built with React and TypeScript to showcase my ever-growing list of projects!",
+    //   stack: ["TypeScript", "React", "JavaScript"],
+    //   links: [
+    //     {
+    //       name: "GitHub",
+    //       link: "https://github.com/teyahbd/my-portfolio-site",
+    //     },
+    //     {
+    //       name: "Portfolio Site",
+    //       link: "https://heyateyah.com",
+    //     },
+    //   ],
+    //   year: 2023,
+    //   order: 2,
+    // },
     {
       title: {
         name: "Word Recommendation API",
@@ -117,61 +118,61 @@ export const getProjects = (): ProjectFields[] => {
       year: 2022,
       order: 8,
     },
-    {
-      title: {
-        name: "Rover UI",
-        icon: "fa-solid fa-rocket",
-      },
-      description:
-        "Team project to build a UI for the NASA rover API to learn the tech stack for a client.",
-      stack: ["Vue", "TypeScript", "JavaScript", "CI/CD", "GitHub Actions"],
-      links: [
-        {
-          name: "GitHub",
-          link: "https://github.com/beaver-factory/rover-ui",
-        },
-        {
-          name: "Rover UI",
-          link: "https://beaver-factory.github.io/rover-ui/",
-        },
-      ],
-      year: 2023,
-      order: 3,
-    },
-    {
-      title: {
-        name: "NC Shares",
-        icon: "fa-solid fa-chart-line",
-      },
-      description:
-        "An app providing weekly updates on the performance of a share price chosen by the user.",
-      stack: ["Python"],
-      links: [
-        {
-          name: "GitHub",
-          link: "https://github.com/beaver-factory/share-price",
-        },
-      ],
-      year: undefined,
-      order: 5,
-    },
-    {
-      title: {
-        name: "Snake Case API",
-        icon: "fa-brands fa-docker",
-      },
-      description:
-        "A simple HTTP server built using bun and containerised with Docker.",
-      stack: ["Docker", "REST API", "Python"],
-      links: [
-        {
-          name: "GitHub",
-          link: "https://github.com/teyahbd/bun-http-server-docker",
-        },
-      ],
-      year: undefined,
-      order: 6,
-    },
+    // {
+    //   title: {
+    //     name: "Rover UI",
+    //     icon: "fa-solid fa-rocket",
+    //   },
+    //   description:
+    //     "Team project to build a UI for the NASA rover API to learn the tech stack for a client.",
+    //   stack: ["Vue", "TypeScript", "JavaScript", "CI/CD", "GitHub Actions"],
+    //   links: [
+    //     {
+    //       name: "GitHub",
+    //       link: "https://github.com/beaver-factory/rover-ui",
+    //     },
+    //     {
+    //       name: "Rover UI",
+    //       link: "https://beaver-factory.github.io/rover-ui/",
+    //     },
+    //   ],
+    //   year: 2023,
+    //   order: 3,
+    // },
+    // {
+    //   title: {
+    //     name: "NC Shares",
+    //     icon: "fa-solid fa-chart-line",
+    //   },
+    //   description:
+    //     "An app providing weekly updates on the performance of a share price chosen by the user.",
+    //   stack: ["Python"],
+    //   links: [
+    //     {
+    //       name: "GitHub",
+    //       link: "https://github.com/beaver-factory/share-price",
+    //     },
+    //   ],
+    //   year: undefined,
+    //   order: 5,
+    // },
+    // {
+    //   title: {
+    //     name: "Snake Case API",
+    //     icon: "fa-brands fa-docker",
+    //   },
+    //   description:
+    //     "A simple HTTP server built using bun and containerised with Docker.",
+    //   stack: ["Docker", "REST API", "Python"],
+    //   links: [
+    //     {
+    //       name: "GitHub",
+    //       link: "https://github.com/teyahbd/bun-http-server-docker",
+    //     },
+    //   ],
+    //   year: undefined,
+    //   order: 6,
+    // },
     {
       title: {
         name: "Nanoindentation ANSYS Model",
@@ -195,6 +196,12 @@ export const getProjects = (): ProjectFields[] => {
       links: [],
       year: 2019,
       order: 10,
+      imagePaths: [
+        "../../../data/project_images.map1.png",
+        "../../../data/project_images.map2.png",
+        "../../../data/project_images.map3.png",
+        "../../../data/project_images.map4.png",
+      ],
     },
   ];
   return projects;

@@ -5,6 +5,7 @@ import "./styles.css";
 import IntroParagraph from "../../atoms/IntroParagraph/IntroParagraph";
 import { ProjectFields } from "../../data/projects";
 import { Info } from "../../data/info";
+import ImageCarousel from "../../organisms/ImageCarousel";
 
 interface ScrollContainerProps {
   intro: string[];
@@ -23,7 +24,12 @@ function ScrollContainer(props: ScrollContainerProps) {
       </div> */}
       <h2 id="projects-header">Here are some cool things I've built!</h2>
       {props.projects.map((project, index) => {
-        return <Project project={project} index={index} />;
+        return (
+          <>
+            <Project project={project} index={index} />
+            <ImageCarousel imagePaths={project.imagePaths} />
+          </>
+        );
       })}
       <ContactFooter
         email={props.info.email ?? ""}
