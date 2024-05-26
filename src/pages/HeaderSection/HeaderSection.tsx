@@ -1,4 +1,5 @@
 import IntroParagraph from "../../atoms/IntroParagraph/IntroParagraph";
+import SkillContainer from "../../atoms/SkillContainer/SkillContainer";
 import { Info } from "../../data/info";
 import ContactFooter from "../../organisms/ContactFooter/ContactFooter";
 import "./styles.css";
@@ -23,25 +24,12 @@ function HeaderSection(props: HeaderSection) {
       <div id="name-title-container">
         <h1 className="name">{props.info.name ?? "Teyah"}</h1>
         <span id="title-container" className="web-only">
-          {/* <img
-            className="dev"
-            src={imagePath}
-            onError={(e) => {
-              (e.target as HTMLImageElement).style.display = "none";
-            }}
-          /> */}
           {props.info.job_title ?? "software engineer"}
         </span>
-        {/* <img
-          className="dev mobile-only-img"
-          src={imagePath}
-          onError={(e) => {
-            (e.target as HTMLImageElement).style.display = "none";
-          }}
-        /> */}
         <span className="title mobile-only">
           {props.info.job_title ?? "software engineer"}
         </span>
+        <SkillContainer />
       </div>
       <ContactFooter
         email={props.info.email ?? ""}

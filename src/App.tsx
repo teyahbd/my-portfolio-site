@@ -6,8 +6,6 @@ import { Info, getInfo } from "./data/info";
 import { getIntro } from "./data/intro";
 import { ProjectFields, getProjects } from "./data/projects";
 
-// TODO: add timeout or error page
-
 function App() {
   const emptyProjects: ProjectFields[] = [];
   const [personalInfo, setPersonalInfo] = useState<Info>({
@@ -31,7 +29,6 @@ function App() {
 
   return (
     <>
-      {/* <OmbreCircle /> */}
       <div id="page-background"></div>
       {
         <div id="main-page">

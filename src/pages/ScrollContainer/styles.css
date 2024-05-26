@@ -4,17 +4,6 @@
   padding-top: calc(5 * var(--standard-padding-size));
   padding-bottom: calc(5 * var(--standard-padding-size));
   padding-left: calc(2 * var(--standard-padding-size));
-  /* background: linear-gradient(
-    45deg,
-    #c7f5fe 10%,
-    #c7f5fe 40%,
-    #fcc8f8 40%,
-    #fcc8f8 60%,
-    #eab4f8 60%,
-    #eab4f8 65%,
-    #f3f798 65%,
-    #f3f798 90%
-  ); */
 }
 
 #projects-header {
@@ -44,24 +33,6 @@ p {
   font-family: var(--primary-font);
   line-height: var(--standard-line-height);
   font-size: var(--medium-font-size);
-}
-
-#mini-ombre-circle {
-  background: linear-gradient(
-    -135deg,
-    rgb(119, 255, 244) 0%,
-    rgb(238, 155, 255) 70%,
-    rgb(255, 209, 101) 100%
-  );
-  width: 2rem;
-  height: 2rem;
-  border-radius: 50%;
-}
-
-#ombre-container {
-  display: flex;
-  align-items: center;
-  justify-content: center;
 }
 
 @media only screen and (max-width: 1024px) {

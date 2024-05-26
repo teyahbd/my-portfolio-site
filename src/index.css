@@ -1,12 +1,3 @@
-@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Calistoga&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Belanosima&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Figtree&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Mooli&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Montagu+Slab&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Crimson+Pro&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;800;900&display=swap");
 
 :root {
@@ -16,13 +7,11 @@
   -moz-osx-font-smoothing: grayscale;
   -webkit-text-size-adjust: 100%;
   --header-font: "Figtree", sans-serif;
-  /* make secondary times if using playfair */
   --primary-font: "Figtree", sans-serif;
   --primary-background-color: #fcedda;
   --secondary-background-color: yellow;
   --primary-font-color: #ee4e34;
   --secondary-font-color: #c3402b;
-  /* --secondary-font-color: #b01700; */
   --tertiary-font-color: #ff8f7d;
   --small-font-size: 1rem;
   --medium-font-size: 1.2rem;
