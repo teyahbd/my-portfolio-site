@@ -16,6 +16,8 @@
 @media only screen and (max-width: 1024px) {
   #contact-footer {
     flex-direction: column;
+    padding: 0;
+    padding-top: calc(2 * var(--standard-padding-size));
   }
   .mobile-only {
     display: flex !important;

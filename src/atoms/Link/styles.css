@@ -18,6 +18,10 @@
 }
 
 @media only screen and (max-width: 1024px) {
+  .project-link {
+    padding-left: 0;
+    padding-right: var(--standard-padding-size);
+  }
   .project-link:hover {
     transform: none;
   }

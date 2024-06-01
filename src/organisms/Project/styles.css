@@ -32,11 +32,18 @@
 .project-links {
   width: fit-content;
   display: flex;
-  justify-content: space-between;
+  flex-wrap: wrap;
+  justify-content: left;
+  width: 100%;
   align-items: center;
   color: var(--tertiary-font-color);
   font-family: var(--header-font);
   text-decoration: none !important;
+}
+
+.project-year {
+  font-weight: 100;
+  padding-left: var(--small-padding-size);
 }
 
 .name-icon {
@@ -65,9 +72,24 @@
 @media only screen and (max-width: 1024px) {
   .project {
     padding: 0;
+    padding-top: calc(2 * var(--small-padding-size));
+    padding-bottom: calc(2 * var(--small-padding-size));
   }
   .stack-word-highlight {
     color: inherit;
     transform: none;
+  }
+  .project-desc {
+    padding-left: 0;
+    padding-right: 0;
+  }
+  .project-name {
+    padding-left: 0;
+    padding-right: 0;
+  }
+  .project-links {
+    flex-wrap: wrap;
+    justify-content: left;
+    width: 100%;
   }
 }

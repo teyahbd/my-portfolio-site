@@ -49,11 +49,11 @@ html {
   }
 }
 
-.fade-in-slow {
+/* .fade-in-slow {
   animation: fadeInSlowAnimation ease 1.5s;
   animation-iteration-count: 1;
   animation-fill-mode: forwards;
-}
+} */
 
 @keyframes fadeInSlowAnimation {
   0% {

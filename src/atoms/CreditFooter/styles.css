@@ -35,6 +35,9 @@ footer {
     display: block;
   }
   #credit-footer {
-    padding: var(--small-padding-size);
+    padding: 0;
+    text-align: center;
+    padding-top: var(--standard-padding-size);
+    padding-bottom: var(--standard-padding-size);
   }
 }

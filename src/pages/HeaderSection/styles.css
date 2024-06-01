@@ -63,9 +63,12 @@ header {
     padding: var(--standard-padding-size);
     justify-content: space-between;
     align-items: center;
+    height: 100%;
   }
   #name-title-container {
     align-items: center;
+    padding-top: var(--standard-padding-size);
+    padding-bottom: var(--standard-padding-size);
   }
   #name-title-container > h1 {
     text-align: center;

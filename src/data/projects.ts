@@ -6,6 +6,7 @@ export interface ProjectFields {
   stack?: string[];
   order: number;
   title: TitleType;
+  isMajor: boolean;
 }
 
 export interface LinkType {
@@ -26,7 +27,7 @@ export const getProjects = (): ProjectFields[] => {
         icon: "fa-solid fa-chart-pie",
       },
       description:
-        "Collaborated with a small team to build an analytics dashboard served by data pipelines hosted in Azure.",
+        "A data analytics dashboard powered by Python ETL pipelines including natural language processing with SpaCy. The data processing pipelines are hosted in Azure using Azure Cloud Functions with data stored in an Azure Postgres database. All infrastructure deployed as IaC using Terraform.",
       stack: ["Azure", "Python", "CI/CD", "Terraform"],
       links: [
         {
@@ -36,10 +37,11 @@ export const getProjects = (): ProjectFields[] => {
       ],
       year: 2023,
       order: 1,
+      isMajor: true,
     },
     {
       title: {
-        name: "My gorgeous portfolio site",
+        name: "My Gorgeous Portfolio Site",
         icon: "fa-solid fa-folder-open",
       },
       description:
@@ -57,14 +59,15 @@ export const getProjects = (): ProjectFields[] => {
       ],
       year: 2023,
       order: 2,
+      isMajor: false,
     },
     {
       title: {
-        name: "Word Recommendation API",
+        name: "Santa's Little Helper",
         icon: "fa-solid fa-gift",
       },
       description:
-        "Flask API that returns related keywords using a Word2Vec model custom-trained on eCommerce vocabulary for a present recommendation app. Call this Santa's Little Helper",
+        "A Python Flask API that returns related keywords using a Word2Vec NLP model custom-trained on eCommerce vocabulary. This API powers Santa's Little Helper - a React Native app that helps you find the perfect Christmas present using a swipe mechanism and machine learning.",
       stack: ["Python", "NLP", "REST API"],
       links: [
         {
@@ -72,12 +75,13 @@ export const getProjects = (): ProjectFields[] => {
           link: "https://github.com/teyahbd/ecommerce-keyword-api",
         },
         {
-          name: "Project page",
-          link: "",
+          name: "Project Page",
+          link: "https://northcoders.com/projects/nov-2022/santas-little-helper",
         },
       ],
       year: 2022,
       order: 4,
+      isMajor: true,
     },
     {
       title: {
@@ -85,7 +89,7 @@ export const getProjects = (): ProjectFields[] => {
         icon: "fa-solid fa-dice",
       },
       description:
-        "Full stack application. React review site that allows users to read reviews, post comments and vote! Built with Javascript and HTML and CSS. Express API and Postgres database serve a board game review site.",
+        "A React board game review site that allows users to read reviews, post comments and vote! Built on the front end with Javascript and HTML and CSS and powered on the back end by a Node Express API and a PostgreSQL database.",
       stack: [
         "javascript",
         "react",
@@ -98,7 +102,7 @@ export const getProjects = (): ProjectFields[] => {
       ],
       links: [
         {
-          name: "Frontend GitHub repo",
+          name: "Front End GitHub",
           link: "https://github.com/teyahbd/nc-games-reviews",
         },
         {
@@ -106,7 +110,7 @@ export const getProjects = (): ProjectFields[] => {
           link: "https://nc-board-game-reviews.netlify.app/",
         },
         {
-          name: "Backend GitHub",
+          name: "Back End GitHub",
           link: "https://github.com/teyahbd/nc-games-reviews-api",
         },
         {
@@ -116,6 +120,44 @@ export const getProjects = (): ProjectFields[] => {
       ],
       year: 2022,
       order: 8,
+      isMajor: true,
+    },
+
+    {
+      title: {
+        name: "NC Shares",
+        icon: "fa-solid fa-chart-line",
+      },
+      description:
+        "A Python app providing weekly updates on the performance of a share price chosen by the user, with both email and Slack notifications.",
+      stack: ["Python", "Poetry"],
+      links: [
+        {
+          name: "GitHub",
+          link: "https://github.com/beaver-factory/share-price",
+        },
+      ],
+      year: 2023,
+      order: 5,
+      isMajor: false,
+    },
+    {
+      title: {
+        name: "Snake Case API",
+        icon: "fa-brands fa-docker",
+      },
+      description:
+        "A simple, snake-casing HTTP server built using Bun, TypeScript and containerised with Docker.",
+      stack: ["Docker", "REST API", "Bun", "TypeScript"],
+      links: [
+        {
+          name: "GitHub",
+          link: "https://github.com/teyahbd/bun-http-server-docker",
+        },
+      ],
+      year: 2023,
+      order: 6,
+      isMajor: false,
     },
     {
       title: {
@@ -123,7 +165,7 @@ export const getProjects = (): ProjectFields[] => {
         icon: "fa-solid fa-rocket",
       },
       description:
-        "Team project to build a UI for the NASA rover API to learn the tech stack for a client.",
+        "A UI displaying photos of Mars from the NASA rover API built in Vue and TypeScript featuring GitHub Actions CI/CD.",
       stack: ["Vue", "TypeScript", "JavaScript", "CI/CD", "GitHub Actions"],
       links: [
         {
@@ -137,40 +179,7 @@ export const getProjects = (): ProjectFields[] => {
       ],
       year: 2023,
       order: 3,
-    },
-    {
-      title: {
-        name: "NC Shares",
-        icon: "fa-solid fa-chart-line",
-      },
-      description:
-        "An app providing weekly updates on the performance of a share price chosen by the user.",
-      stack: ["Python"],
-      links: [
-        {
-          name: "GitHub",
-          link: "https://github.com/beaver-factory/share-price",
-        },
-      ],
-      year: undefined,
-      order: 5,
-    },
-    {
-      title: {
-        name: "Snake Case API",
-        icon: "fa-brands fa-docker",
-      },
-      description:
-        "A simple HTTP server built using bun and containerised with Docker.",
-      stack: ["Docker", "REST API", "Python"],
-      links: [
-        {
-          name: "GitHub",
-          link: "https://github.com/teyahbd/bun-http-server-docker",
-        },
-      ],
-      year: undefined,
-      order: 6,
+      isMajor: false,
     },
     {
       title: {
@@ -178,11 +187,17 @@ export const getProjects = (): ProjectFields[] => {
         icon: "fa-solid fa-flask",
       },
       description:
-        "Ansys model of lab-based nanoindentation experiments which successfully provided indentation ratio to improve accuracy of future experiments.",
+        "An Ansys computational model of lab-based nanoindentation experiments used to successfully calculate bending to indentating ratios of collagen.",
       stack: ["ansys"],
-      links: [],
+      links: [
+        {
+          name: "GitHub",
+          link: "https://github.com/teyahbd/nanoindentation-modelling",
+        },
+      ],
       year: 2021,
       order: 9,
+      isMajor: false,
     },
     {
       title: {
@@ -190,11 +205,17 @@ export const getProjects = (): ProjectFields[] => {
         icon: "fa-solid fa-square-root-variable",
       },
       description:
-        "A numerical modelling project exploring simulated annealing, image compression and physical modelling using differential equations in Python and Jupyter Notebook.",
+        "A numerical modelling project exploring simulated annealing, image compression and modelling differential equations in Python via Jupyter Notebook.",
       stack: ["python"],
-      links: [],
+      links: [
+        {
+          name: "GitHub",
+          link: "https://github.com/teyahbd/numerical-modelling-in-python",
+        },
+      ],
       year: 2019,
       order: 10,
+      isMajor: false,
     },
   ];
   return projects;
