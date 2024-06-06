@@ -27,12 +27,12 @@ function ScrollContainer(props: ScrollContainerProps) {
       <p className="stack-desc">
         <span className={"fa-solid fa-language name-icon"}></span>
         <span className="stack-type">Languages</span> - TypeScript, Python,
-        JavaScript, SQL
+        JavaScript, SQL, Kotlin, Swift
       </p>
       <p className="stack-desc">
         <span className={"fa-solid fa-desktop name-icon"}></span>
         <span className="stack-type">Front End</span> - React, React Native,
-        Vue, HTML, CSS
+        Vue, Next.js, HTML, CSS
       </p>
       <p className="stack-desc">
         <span className={"fa-solid fa-server name-icon"}></span>
