@@ -28,7 +28,7 @@ function Project({ project }: ProjectProps) {
         <h4 className="project-name">
           {/* TODO: don't render icon if not available (also accessibility!) */}
           <span className={`${project.title.icon} name-icon`}></span>
-          {`${project.title.name}, ${project.year}` ?? ""}
+          {`${project.title.name}, ${project.year}`}
         </h4>
       </div>
       {/* <p className="project-desc">
