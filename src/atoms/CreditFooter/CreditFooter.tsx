@@ -1,9 +1,9 @@
 import "./styles.css";
 
-function CreditFooter(props: { name: string }) {
+function CreditFooter() {
   return (
     <footer>
-      <p id="credit-footer">© 2024 {props.name}</p>
+      <p id="credit-footer">© 2025 Made with 🩷 by me</p>
       {/* <p id="footer-icon">✨</p> */}
     </footer>
   );

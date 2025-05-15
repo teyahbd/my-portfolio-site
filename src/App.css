@@ -66,3 +66,42 @@ html {
     opacity: 1;
   }
 }
+
+:root {
+  --primary-background-color: #fef2f5;
+  --tertiary-font-color: #3b4993;
+  --transition-duration: 0.3s;
+}
+
+body {
+  background-color: var(--primary-background-color);
+  color: var(--tertiary-font-color);
+  transition: background-color var(--transition-duration) ease, color var(--transition-duration) ease;
+}
+
+#theme-toggle {
+  position: fixed;
+  top: 2rem;
+  right: 3rem;
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: var(--primary-font-color);
+  transition: color var(--transition-duration) ease;
+}
+
+#theme-toggle i {
+  font-size: 2rem;
+  width: 3rem; /* Adds a fixed width to normalize the moon icon */
+  height: 3rem; /* Ensures consistent height */
+  display: inline-flex; /* Centers the icon within the fixed dimensions */
+  align-items: center;
+  justify-content: center;
+  transition: opacity var(--transition-duration) ease, transform var(--transition-duration) ease;
+}
+
+#theme-toggle i.fade-out {
+  opacity: 0;
+  transform: scale(0.8);
+}

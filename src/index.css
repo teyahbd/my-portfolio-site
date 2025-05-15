@@ -18,12 +18,12 @@
   --header-font: "Figtree", sans-serif;
   /* make secondary times if using playfair */
   --primary-font: "Figtree", sans-serif;
-  --primary-background-color: #fcedda;
+  --primary-background-color: #fef2f5;
   --secondary-background-color: yellow;
-  --primary-font-color: #ee4e34;
+  --primary-font-color: 	#e637a0;
   --secondary-font-color: #c3402b;
   /* --secondary-font-color: #b01700; */
-  --tertiary-font-color: #ff8f7d;
+  --tertiary-font-color: #3b4993;
   --small-font-size: 1rem;
   --medium-font-size: 1.2rem;
   --medlar-font-size: 1.75rem;
@@ -34,4 +34,11 @@
   --small-padding-size: 8px;
   --standard-line-height: 150%;
   --large-line-height: 200%;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --primary-background-color: 	#171d3a;
+    --tertiary-font-color: #fef2f5;
+  }
 }

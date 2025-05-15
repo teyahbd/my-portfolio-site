@@ -19,6 +19,8 @@ function App() {
   });
   const [projects, setProjects] = useState(emptyProjects);
   const [intro, setIntro] = useState([] as string[]);
+  const [isDarkMode, setIsDarkMode] = useState(false);
+
   useEffect(() => {
     const info = getInfo();
     const intro = getIntro();
@@ -29,11 +31,36 @@ function App() {
     setProjects(projects);
   }, []);
 
+  useEffect(() => {
+    const root = document.documentElement;
+    if (isDarkMode) {
+      root.style.setProperty("--primary-background-color", "#171d3a");
+      root.style.setProperty("--tertiary-font-color", "#fef2f5");
+    } else {
+      root.style.setProperty("--primary-background-color", "#fef2f5");
+      root.style.setProperty("--tertiary-font-color", "#3b4993");
+    }
+  }, [isDarkMode]);
+
+const toggleTheme = () => {
+  const icon = document.querySelector("#theme-toggle i");
+  if (icon) {
+    icon.classList.add("fade-out");
+    setTimeout(() => {
+      setIsDarkMode((prevMode) => !prevMode);
+      icon.classList.remove("fade-out");
+    }, 300); // Match the transition duration in CSS
+  }
+};
   return (
     <>
       {/* <OmbreCircle /> */}
       <div id="page-background"></div>
+      <button id="theme-toggle" onClick={toggleTheme}>
+        <i className={isDarkMode ? "fa-solid fa-sun" : "fa-solid fa-moon"}></i>
+      </button>
       {
+        
         <div id="main-page">
           <HeaderSection info={personalInfo} intro={intro} />
           <ScrollContainer
