@@ -91,6 +91,7 @@ body {
   cursor: pointer;
   color: var(--primary-font-color);
   transition: color var(--transition-duration) ease;
+  z-index: 1000;
 }
 
 #theme-toggle i {
