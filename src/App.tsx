@@ -42,16 +42,16 @@ function App() {
     }
   }, [isDarkMode]);
 
-const toggleTheme = () => {
-  const icon = document.querySelector("#theme-toggle i");
-  if (icon) {
-    icon.classList.add("fade-out");
-    setTimeout(() => {
-      setIsDarkMode((prevMode) => !prevMode);
-      icon.classList.remove("fade-out");
-    }, 300); // Match the transition duration in CSS
-  }
-};
+  const toggleTheme = () => {
+    const icon = document.querySelector("#theme-toggle i");
+    if (icon) {
+      icon.classList.add("fade-out");
+      setTimeout(() => {
+        setIsDarkMode((prevMode) => !prevMode);
+        icon.classList.remove("fade-out");
+      }, 300); // Match the transition duration in CSS
+    }
+  };
   return (
     <>
       {/* <OmbreCircle /> */}
@@ -60,7 +60,6 @@ const toggleTheme = () => {
         <i className={isDarkMode ? "fa-solid fa-sun" : "fa-solid fa-moon"}></i>
       </button>
       {
-        
         <div id="main-page">
           <HeaderSection info={personalInfo} intro={intro} />
           <ScrollContainer

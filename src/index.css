@@ -20,7 +20,7 @@
   --primary-font: "Figtree", sans-serif;
   --primary-background-color: #fef2f5;
   --secondary-background-color: yellow;
-  --primary-font-color: 	#e637a0;
+  --primary-font-color: #e637a0;
   --secondary-font-color: #c3402b;
   /* --secondary-font-color: #b01700; */
   --tertiary-font-color: #3b4993;
@@ -38,7 +38,7 @@
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --primary-background-color: 	#171d3a;
+    --primary-background-color: #171d3a;
     --tertiary-font-color: #fef2f5;
   }
 }

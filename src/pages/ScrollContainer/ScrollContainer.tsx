@@ -1,6 +1,6 @@
 import CreditFooter from "../../atoms/CreditFooter/CreditFooter";
 import ContactFooter from "../../organisms/ContactFooter/ContactFooter";
-import Project from "../../organisms/Project/Project";
+// import Project from "../../organisms/Project/Project";
 import "./styles.css";
 import IntroParagraph from "../../atoms/IntroParagraph/IntroParagraph";
 import { ProjectFields } from "../../data/projects";
@@ -31,8 +31,8 @@ function ScrollContainer(props: ScrollContainerProps) {
       </p>
       <p className="stack-desc">
         <span className={"fa-solid fa-desktop name-icon"}></span>
-        <span className="stack-type">Front End</span> - React, Next.js, React Native,
-        Vue
+        <span className="stack-type">Front End</span> - React, Next.js, React
+        Native, Vue
       </p>
       <p className="stack-desc">
         <span className={"fa-solid fa-server name-icon"}></span>
@@ -41,7 +41,8 @@ function ScrollContainer(props: ScrollContainerProps) {
       </p>
       <p className="stack-desc">
         <span className={"fa-solid fa-database name-icon"}></span>
-        <span className="stack-type">Data</span> - Apache Airflow, Apache Spark, Amazon Redshift
+        <span className="stack-type">Data</span> - Apache Airflow, Apache Spark,
+        Amazon Redshift
       </p>
       <p className="stack-desc">
         <span className={"fa-solid fa-cloud name-icon"}></span>
@@ -49,8 +50,8 @@ function ScrollContainer(props: ScrollContainerProps) {
       </p>
       <p className="stack-desc">
         <span className={"fa-solid fa-repeat name-icon"}></span>
-        <span className="stack-type">CI/CD</span> - AWS CodeBuild, GitHub Actions, Gitlab
-        CI/CD, Docker, Bitrise
+        <span className="stack-type">CI/CD</span> - AWS CodeBuild, GitHub
+        Actions, Gitlab CI/CD, Docker, Bitrise
       </p>
       <p className="stack-desc">
         <span className={"fa-solid fa-vial name-icon"}></span>

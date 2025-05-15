@@ -76,7 +76,9 @@ html {
 body {
   background-color: var(--primary-background-color);
   color: var(--tertiary-font-color);
-  transition: background-color var(--transition-duration) ease, color var(--transition-duration) ease;
+  transition:
+    background-color var(--transition-duration) ease,
+    color var(--transition-duration) ease;
 }
 
 #theme-toggle {
@@ -98,7 +100,9 @@ body {
   display: inline-flex; /* Centers the icon within the fixed dimensions */
   align-items: center;
   justify-content: center;
-  transition: opacity var(--transition-duration) ease, transform var(--transition-duration) ease;
+  transition:
+    opacity var(--transition-duration) ease,
+    transform var(--transition-duration) ease;
 }
 
 #theme-toggle i.fade-out {
