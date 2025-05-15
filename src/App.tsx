@@ -19,7 +19,9 @@ function App() {
   });
   const [projects, setProjects] = useState(emptyProjects);
   const [intro, setIntro] = useState([] as string[]);
-  const [isDarkMode, setIsDarkMode] = useState(false);
+  const [isDarkMode, setIsDarkMode] = useState(
+    window.matchMedia("(prefers-color-scheme: dark)").matches,
+  );
 
   useEffect(() => {
     const info = getInfo();
@@ -41,6 +43,16 @@ function App() {
       root.style.setProperty("--tertiary-font-color", "#3b4993");
     }
   }, [isDarkMode]);
+
+  useEffect(() => {
+    const mediaQuery = window.matchMedia("(prefers-color-scheme: dark)");
+    const handleChange = (e: MediaQueryListEvent) => {
+      setIsDarkMode(e.matches);
+    };
+
+    mediaQuery.addEventListener("change", handleChange);
+    return () => mediaQuery.removeEventListener("change", handleChange);
+  }, []);
 
   const toggleTheme = () => {
     const icon = document.querySelector("#theme-toggle i");
